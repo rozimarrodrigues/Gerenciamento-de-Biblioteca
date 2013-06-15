@@ -13,8 +13,8 @@ public class BibliotecaFacadeTest {
 	}
 	
 	@Test
-	public void ciarUsuarioTest() {
-		
+	public void ciarAlunoTest() {
+		//TODO
 	}
 
 }
