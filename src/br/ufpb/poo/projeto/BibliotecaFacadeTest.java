@@ -12,6 +12,8 @@ public class BibliotecaFacadeTest {
 		biblioteca = new BibliotecaFacade(); 
 	}
 	
+	// CRUD = Create, Read, Update and Delete
+	// GerenteAluno - Rozimar Rodrigues
 	@Test
 	public void adicionarAluno() {
 		//TODO
@@ -21,5 +23,14 @@ public class BibliotecaFacadeTest {
 	public void adicionaAlunoNovamente(){
 		//TODO
 	}
-
+	
+	// GerenteProfessor - Emanuel Rair
+	/*
+	 * TODO testes para o GerenteProfessor
+	 */
+	
+	// GerenteFuncionario - Mailton Fernandes
+	/*
+	 * TODO testes para o GerenteFuncionario
+	 */
 }
