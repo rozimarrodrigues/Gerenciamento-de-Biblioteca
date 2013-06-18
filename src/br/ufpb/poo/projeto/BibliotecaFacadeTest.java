@@ -16,5 +16,10 @@ public class BibliotecaFacadeTest {
 	public void adicionarAluno() {
 		//TODO
 	}
+	
+	@Test
+	public void adicionaAlunoNovamente(){
+		//TODO
+	}
 
 }
