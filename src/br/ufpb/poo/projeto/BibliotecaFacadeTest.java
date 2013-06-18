@@ -13,7 +13,7 @@ public class BibliotecaFacadeTest {
 	}
 	
 	@Test
-	public void ciarAlunoTest() {
+	public void adicionarAluno() {
 		//TODO
 	}
 
