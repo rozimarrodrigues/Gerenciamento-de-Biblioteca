@@ -38,6 +38,7 @@ public class BibliotecaFacadeTest {
 		aluno = new Aluno();
 		aluno.setMatricula("80911005");
 		biblioteca.adicionaAluno(aluno);
+		assertEquals(2,biblioteca.quantidadeAluno());
 	}
 	
 	// GerenteProfessor - Emanuel Rair
