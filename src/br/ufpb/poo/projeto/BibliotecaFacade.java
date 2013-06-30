@@ -7,5 +7,10 @@ public class BibliotecaFacade {
 		
 	}
 
+	public int quantidadeAluno() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
 }
 
