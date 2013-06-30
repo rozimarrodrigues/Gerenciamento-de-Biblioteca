@@ -32,7 +32,12 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionaAlunoDiferente() {
-		
+		Aluno aluno = new Aluno();
+		aluno.setMatricula("80911004");
+		biblioteca.adicionaAluno(aluno);
+		aluno = new Aluno();
+		aluno.setMatricula("80911005");
+		biblioteca.adicionaAluno(aluno);
 	}
 	
 	// GerenteProfessor - Emanuel Rair
