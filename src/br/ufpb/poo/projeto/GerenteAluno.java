@@ -11,5 +11,14 @@ public class GerenteAluno {
 		alunos.add(aluno);
 		
 	}
+	public boolean alunoJaCadastrado(Aluno aluno){
+		boolean existe = false;
+		for(Aluno a: alunos){
+			if(a.equals(aluno)){
+				existe = true;
+			}
+		}
+		return existe;
+	}
 
 }
