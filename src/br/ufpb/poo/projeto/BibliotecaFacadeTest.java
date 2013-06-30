@@ -30,6 +30,11 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaAluno(aluno);
 	}
 	
+	@Test
+	public void adicionaAlunoDiferente() {
+		
+	}
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
