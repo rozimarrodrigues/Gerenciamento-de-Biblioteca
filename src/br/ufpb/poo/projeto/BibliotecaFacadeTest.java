@@ -25,7 +25,9 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionaAlunoNovamente(){
-		//TODO
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionaAluno(aluno);
 	}
 	
 	// GerenteProfessor - Emanuel Rair
