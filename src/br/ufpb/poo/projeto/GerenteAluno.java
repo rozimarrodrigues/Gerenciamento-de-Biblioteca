@@ -8,7 +8,7 @@ public class GerenteAluno {
 	List<Aluno> alunos = new ArrayList<Aluno>(); 
 
 	public void addAluno(Aluno aluno) {
-		// TODO Auto-generated method stub
+		alunos.add(aluno);
 		
 	}
 
