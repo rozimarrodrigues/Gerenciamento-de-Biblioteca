@@ -7,7 +7,10 @@ public class GerenteAluno {
 	
 	List<Aluno> alunos = new ArrayList<Aluno>(); 
 
-	public void addAluno(Aluno aluno) {
+	public void addAluno(Aluno aluno){
+		if(alunoJaCadastrado(aluno)){
+			throw new AlunoJaCadastradoException("Aluno ja cadastrado!!!"); 
+		}
 		alunos.add(aluno);
 		
 	}
