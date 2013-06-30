@@ -5,7 +5,7 @@ public class BibliotecaFacade {
 	GerenteAluno gerenteAluno = new GerenteAluno();
 	
 	public void adicionaAluno(Aluno aluno) {
-		// TODO Auto-generated method stub
+		gerenteAluno.addAluno(aluno);
 		
 	}
 
