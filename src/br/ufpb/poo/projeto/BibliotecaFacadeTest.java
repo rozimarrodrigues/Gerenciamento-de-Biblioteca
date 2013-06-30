@@ -18,6 +18,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
+		assertEquals(1,biblioteca.quantidadeAluno());
 	}
 	
 	@Test
