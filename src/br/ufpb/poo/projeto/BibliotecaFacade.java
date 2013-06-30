@@ -2,6 +2,8 @@ package br.ufpb.poo.projeto;
 
 public class BibliotecaFacade {
 
+	GerenteAluno gerenteAluno = new GerenteAluno();
+	
 	public void adicionaAluno(Aluno aluno) {
 		// TODO Auto-generated method stub
 		
@@ -11,6 +13,7 @@ public class BibliotecaFacade {
 		// TODO Auto-generated method stub
 		return 1;
 	}
+	
 
 }
 
