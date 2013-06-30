@@ -14,7 +14,6 @@ public class BibliotecaFacadeTest {
 		biblioteca = new BibliotecaFacade(); 
 	}
 	
-	// CRUD = Create, Read, Update and Delete
 	// GerenteAluno - Rozimar Rodrigues
 	@Test
 	public void adicionarAluno() {
