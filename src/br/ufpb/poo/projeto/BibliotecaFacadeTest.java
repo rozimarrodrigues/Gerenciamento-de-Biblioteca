@@ -16,7 +16,7 @@ public class BibliotecaFacadeTest {
 	// GerenteAluno - Rozimar Rodrigues
 	@Test
 	public void adicionarAluno() {
-		//TODO
+		Aluno aluno = new Aluno();
 	}
 	
 	@Test
