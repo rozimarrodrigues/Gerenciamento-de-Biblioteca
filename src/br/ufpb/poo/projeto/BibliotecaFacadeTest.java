@@ -23,7 +23,7 @@ public class BibliotecaFacadeTest {
 		assertEquals(1,biblioteca.quantidadeAluno());
 	}
 	
-	@Test
+	@Test(expected = AlunoJaCadastradoException.class)
 	public void adicionaAlunoNovamente(){
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
