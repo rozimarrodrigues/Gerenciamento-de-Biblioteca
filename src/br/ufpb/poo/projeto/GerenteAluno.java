@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GerenteAluno {
 	
-	List<Aluno> alunos = new ArrayList<Aluno>(); 
+	private List<Aluno> alunos = new ArrayList<Aluno>(); 
 
 	public void addAluno(Aluno aluno){
 		if(alunoJaCadastrado(aluno)){
@@ -22,6 +22,9 @@ public class GerenteAluno {
 			}
 		}
 		return existe;
+	}
+	public int quantidadeDeAlunos() {
+		return alunos.size();
 	}
 
 }

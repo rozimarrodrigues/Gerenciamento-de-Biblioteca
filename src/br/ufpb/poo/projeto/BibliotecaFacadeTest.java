@@ -20,7 +20,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
-		assertEquals(1,biblioteca.quantidadeAluno());
+		assertEquals(1,biblioteca.quantidadeAlunos());
 	}
 	
 	@Test(expected = AlunoJaCadastradoException.class)
@@ -38,7 +38,7 @@ public class BibliotecaFacadeTest {
 		aluno = new Aluno();
 		aluno.setMatricula("80911005");
 		biblioteca.adicionaAluno(aluno);
-		assertEquals(2,biblioteca.quantidadeAluno());
+		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 	
 	// GerenteProfessor - Emanuel Rair
