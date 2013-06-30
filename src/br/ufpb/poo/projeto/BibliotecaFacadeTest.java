@@ -17,6 +17,7 @@ public class BibliotecaFacadeTest {
 	@Test
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
 	}
 	
 	@Test
