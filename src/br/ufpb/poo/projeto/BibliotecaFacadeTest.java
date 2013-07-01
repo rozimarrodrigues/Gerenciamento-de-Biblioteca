@@ -40,6 +40,8 @@ public class BibliotecaFacadeTest {
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 	
+	//Testando novo branch
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
