@@ -1,6 +1,7 @@
 package br.ufpb.poo.projeto;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,7 +41,14 @@ public class BibliotecaFacadeTest {
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 	
-	//Testando novo branch
+	@Test
+	public void removeAluno(){
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		assertTrue(biblioteca.quantidadeAlunos() == 0);
+	}
+	
 	
 	// GerenteProfessor - Emanuel Rair
 	/*
