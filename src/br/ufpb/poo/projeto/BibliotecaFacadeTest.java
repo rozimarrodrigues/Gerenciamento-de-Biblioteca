@@ -31,7 +31,13 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionaAlunoDiferente() {
-		//TODO
+		Aluno aluno = new Aluno();
+		aluno.setMatricula("80911004");
+		biblioteca.adicionaAluno(aluno);
+		aluno = new Aluno();
+		aluno.setMatricula("80911005");
+		biblioteca.adicionaAluno(aluno);
+		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 	
 	// GerenteProfessor - Emanuel Rair
