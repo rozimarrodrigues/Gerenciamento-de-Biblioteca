@@ -26,5 +26,9 @@ public class GerenteAluno {
 	public int quantidadeDeAlunos() {
 		return alunos.size();
 	}
+	public void removerAluno(Aluno aluno) {
+		alunos.remove(aluno);
+		
+	}
 
 }
