@@ -14,9 +14,9 @@ public class GerenteAluno {
 		alunos.add(aluno);
 		
 	}
-	public boolean alunoJaCadastrado(Aluno aluno){
+	public boolean alunoJaCadastrado(Pessoa aluno){
 		boolean existe = false;
-		for(Aluno a: alunos){
+		for(Pessoa a: alunos){
 			if(a.equals(aluno)){
 				existe = true;
 			}
@@ -26,7 +26,7 @@ public class GerenteAluno {
 	public int quantidadeDeAlunos() {
 		return alunos.size();
 	}
-	public void removerAluno(Aluno aluno) {
+	public void removerAluno(Pessoa aluno) {
 		alunos.remove(aluno);
 		
 	}

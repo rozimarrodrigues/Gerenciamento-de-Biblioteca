@@ -1,7 +1,6 @@
 package br.ufpb.poo.projeto;
 
-public class Aluno {
-	private String nome;
+public class Aluno extends Pessoa {
 	private String matricula;
 
 	public String getMatricula(){
@@ -9,12 +8,5 @@ public class Aluno {
 	}
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
-	}
-	
-	public void setNome(String nome){
-		this.nome=nome;
-	}
-	public String getNome(){
-		return nome;
 	}
 }
