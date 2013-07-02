@@ -55,8 +55,4 @@ public class BibliotecaFacadeTest {
 	 * TODO testes para o GerenteProfessor
 	 */
 	
-	// GerenteFuncionario - Mailton Fernandes
-	/*
-	 * TODO testes para o GerenteFuncionario
-	 */
 }
