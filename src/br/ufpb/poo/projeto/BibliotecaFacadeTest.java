@@ -57,6 +57,12 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 	}
 	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarAlunoSemMatricula(){
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+	}
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
