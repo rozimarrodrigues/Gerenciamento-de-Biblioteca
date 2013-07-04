@@ -2,34 +2,33 @@ package br.ufpb.poo.projeto;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
 
 public class BibliotecaFacadeTest {
-	
+
 	private BibliotecaFacade biblioteca;
 
 	@Before
 	public void iniciar(){
 		biblioteca = new BibliotecaFacade(); 
 	}
-	
+
 	@Test // GerenteAluno - Rozimar Rodrigues
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(1,biblioteca.quantidadeAlunos());
 	}
-	
+
 	@Test(expected = AlunoJaCadastradoException.class)
 	public void adicionaAlunoNovamente(){
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	@Test
 	public void adicionaAlunoDiferente() {
 		Aluno aluno = new Aluno();
@@ -40,7 +39,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
-	
+
 	@Test
 	public void removeAluno(){
 		Aluno aluno = new Aluno();
@@ -48,15 +47,18 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 		assertTrue(biblioteca.quantidadeAlunos() == 0);
 	}
-	
-	@Test
-	public void teste(){
-		fail("Not implemented yet");
+
+	@Test(expected = AlunoInexistenteException.class)
+	public void removerAlunoNovamente(){
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		biblioteca.removeAluno(aluno);
 	}
-	
+
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
 	 */
-	
+
 }
