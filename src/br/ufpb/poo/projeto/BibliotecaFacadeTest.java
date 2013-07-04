@@ -55,6 +55,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
 	}
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
