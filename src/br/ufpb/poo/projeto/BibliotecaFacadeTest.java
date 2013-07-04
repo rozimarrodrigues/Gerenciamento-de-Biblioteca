@@ -51,7 +51,10 @@ public class BibliotecaFacadeTest {
 	
 	@Test 
 	public void removerAlunoNovamente(){
-		
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		biblioteca.removeAluno(aluno);
 	}
 	// GerenteProfessor - Emanuel Rair
 	/*
