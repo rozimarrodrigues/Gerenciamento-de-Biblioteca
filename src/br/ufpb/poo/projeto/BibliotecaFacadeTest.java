@@ -45,7 +45,8 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.removeAluno(aluno);
-		assertTrue(biblioteca.quantidadeAlunos() == 0);
+		assertEquals("Esperasse que não tenha aluno",
+				0,biblioteca.quantidadeAlunos());
 	}
 	
 	@Test(expected = AlunoInexistenteException.class)
