@@ -48,13 +48,7 @@ public class BibliotecaFacadeTest {
 		assertTrue(biblioteca.quantidadeAlunos() == 0);
 	}
 
-	@Test(expected = AlunoInexistenteException.class)
-	public void removerAlunoNovamente(){
-		Aluno aluno = new Aluno();
-		biblioteca.adicionaAluno(aluno);
-		biblioteca.removeAluno(aluno);
-		biblioteca.removeAluno(aluno);
-	}
+	//Excluir teste
 
 	// GerenteProfessor - Emanuel Rair
 	/*
