@@ -47,9 +47,6 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 		assertTrue(biblioteca.quantidadeAlunos() == 0);
 	}
-
-	//Excluir teste
-
 	
 	@Test(expected = AlunoInexistenteException.class)
 	public void removerAlunoNovamente(){
