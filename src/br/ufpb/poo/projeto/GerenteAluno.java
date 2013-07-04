@@ -9,7 +9,10 @@ public class GerenteAluno {
 
 	public void addAluno(Aluno aluno){
 		if(alunoJaCadastrado(aluno)){
-			throw new AlunoJaCadastradoException("Aluno ja cadastrado!!!"); 
+			throw new AlunoJaCadastradoException("Aluno ja cadastrado!!!");
+		}
+		if(aluno.getMatricula() == 0){
+			throw new CampoInvalidoException("Aluno sem matricula!!!");
 		}
 		alunos.add(aluno);
 		

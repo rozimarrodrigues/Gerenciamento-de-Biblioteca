@@ -18,6 +18,7 @@ public class BibliotecaFacadeTest {
 	@Test // GerenteAluno - Rozimar Rodrigues
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
+		aluno.setMatricula(80921004);
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(1,biblioteca.quantidadeAlunos());
 	}
@@ -25,6 +26,7 @@ public class BibliotecaFacadeTest {
 	@Test(expected = AlunoJaCadastradoException.class)
 	public void adicionaAlunoNovamente(){
 		Aluno aluno = new Aluno();
+		aluno.setMatricula(80921004);
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.adicionaAluno(aluno);
 	}
@@ -32,17 +34,18 @@ public class BibliotecaFacadeTest {
 	@Test
 	public void adicionaAlunoDiferente() {
 		Aluno aluno = new Aluno();
-		aluno.setMatricula("80911004");
+		aluno.setMatricula(80911004);
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
-		aluno.setMatricula("80911005");
+		aluno.setMatricula(80911005);
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 
 	@Test
-	public void removeAluno(){
+	public void removerAluno(){
 		Aluno aluno = new Aluno();
+		aluno.setMatricula(80921004);
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		assertEquals("Esperasse que não tenha aluno",
@@ -52,6 +55,7 @@ public class BibliotecaFacadeTest {
 	@Test(expected = AlunoInexistenteException.class)
 	public void removerAlunoNovamente(){
 		Aluno aluno = new Aluno();
+		aluno.setMatricula(80921004);
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
