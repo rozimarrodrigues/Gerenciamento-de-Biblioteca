@@ -48,6 +48,7 @@ public class BibliotecaFacadeTest {
 		assertTrue(biblioteca.quantidadeAlunos() == 0);
 	}
 	
+	//Teste
 	
 	// GerenteProfessor - Emanuel Rair
 	/*
