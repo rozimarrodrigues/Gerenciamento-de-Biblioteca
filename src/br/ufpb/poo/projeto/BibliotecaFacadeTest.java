@@ -49,7 +49,10 @@ public class BibliotecaFacadeTest {
 		assertTrue(biblioteca.quantidadeAlunos() == 0);
 	}
 	
-	
+	@Test 
+	public void removerAlunoNovamente(){
+		
+	}
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
