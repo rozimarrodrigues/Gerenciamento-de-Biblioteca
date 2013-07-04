@@ -1,7 +1,6 @@
 package br.ufpb.poo.projeto;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +18,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(80921004);
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(1,biblioteca.quantidadeAlunos());
 	}
@@ -27,6 +27,7 @@ public class BibliotecaFacadeTest {
 	public void adicionaAlunoNovamente(){
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(80921004);
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.adicionaAluno(aluno);
 	}
@@ -35,9 +36,11 @@ public class BibliotecaFacadeTest {
 	public void adicionaAlunoDiferente() {
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(80911004);
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
 		aluno.setMatricula(80911005);
+		aluno.setCpf("057.398.874-79");
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
@@ -46,6 +49,7 @@ public class BibliotecaFacadeTest {
 	public void removerAluno(){
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(80921004);
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		assertEquals("Esperasse que não tenha aluno",
@@ -56,6 +60,7 @@ public class BibliotecaFacadeTest {
 	public void removerAlunoNovamente(){
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(80921004);
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
@@ -63,6 +68,12 @@ public class BibliotecaFacadeTest {
 	
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemMatricula(){
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarAlunoSemCpf(){
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 	}

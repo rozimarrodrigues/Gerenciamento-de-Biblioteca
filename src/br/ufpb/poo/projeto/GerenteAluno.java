@@ -14,6 +14,9 @@ public class GerenteAluno {
 		if(aluno.getMatricula() == 0){
 			throw new CampoInvalidoException("Aluno sem matricula!!!");
 		}
+		if(aluno.getCpf()==null){
+			throw new CampoInvalidoException("Aluno sem CPF!!!");
+		}
 		alunos.add(aluno);
 		
 	}
