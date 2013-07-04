@@ -50,6 +50,15 @@ public class BibliotecaFacadeTest {
 
 	//Excluir teste
 
+	
+	@Test(expected = AlunoInexistenteException.class)
+	public void removerAlunoNovamente(){
+		Aluno aluno = new Aluno();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		biblioteca.removeAluno(aluno);
+	}
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor

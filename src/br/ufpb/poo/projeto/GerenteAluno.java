@@ -31,7 +31,6 @@ public class GerenteAluno {
 			throw new AlunoInexistenteException("Não existe aluno para remover!!!");
 		}
 		alunos.remove(aluno);
-		
 	}
 
 }
