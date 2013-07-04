@@ -15,8 +15,7 @@ public class BibliotecaFacadeTest {
 		biblioteca = new BibliotecaFacade(); 
 	}
 	
-	// GerenteAluno - Rozimar Rodrigues
-	@Test
+	@Test // GerenteAluno - Rozimar Rodrigues
 	public void adicionarAluno() {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
