@@ -55,7 +55,7 @@ public class BibliotecaFacadeTest {
 		assertEquals("Esperasse que não tenha aluno",
 				0,biblioteca.quantidadeAlunos());
 	}
-	
+
 	@Test(expected = AlunoInexistenteException.class)
 	public void removerAlunoNovamente(){
 		Aluno aluno = new Aluno();
@@ -65,22 +65,31 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemMatricula(){
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemCpf(){
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
 	 */
 
+
+	private Aluno criarAlunoPadrao() {
+		Aluno aluno = new Aluno();
+		aluno.setNome("Rozimar");
+		aluno.setMatricula(80921004);
+		aluno.setCurso("Computação");
+		aluno.setCpf("047.389.784-97");
+		return aluno;
+	}
 }
