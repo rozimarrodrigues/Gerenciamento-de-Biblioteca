@@ -89,7 +89,7 @@ public class BibliotecaFacadeTest {
 		aluno.setNome("Rozimar");
 		aluno.setMatricula(80921004);
 		aluno.setCurso("Computação");
-		aluno.setCpf("047.389.784-97");
+		aluno.setCpf("04738978497");
 		return aluno;
 	}
 }
