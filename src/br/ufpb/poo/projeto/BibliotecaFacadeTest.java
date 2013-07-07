@@ -87,6 +87,15 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf("04738978497");
 		biblioteca.adicionaAluno(aluno);
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarAlunoSemCurso(){
+		Aluno aluno = new Aluno();
+		aluno.setNome("Rozimar");
+		aluno.setMatricula(80921004);
+		aluno.setCpf("04738978497");
+		biblioteca.adicionaAluno(aluno);
+	}
 
 	// GerenteProfessor - Emanuel Rair
 	/*
