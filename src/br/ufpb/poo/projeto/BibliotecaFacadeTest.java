@@ -41,9 +41,7 @@ public class BibliotecaFacadeTest {
 
 	@Test
 	public void removerAluno(){
-		Aluno aluno = new Aluno();
-		aluno.setMatricula(80921004);
-		aluno.setCpf("04738978497");
+		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		assertEquals("Esperasse que não tenha aluno",
