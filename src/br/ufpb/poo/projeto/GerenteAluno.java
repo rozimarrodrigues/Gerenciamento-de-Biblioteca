@@ -23,6 +23,15 @@ public class GerenteAluno {
 		alunos.add(aluno);
 		
 	}
+	private boolean cpfJaCadastrado(Aluno aluno) {
+		boolean cadastrado = false;
+		for(Pessoa a: alunos){
+			if(a.getCpf().equals(aluno.getCpf())){
+				cadastrado = true;
+			}
+		}
+		return cadastrado;
+	}
 	public boolean alunoJaCadastrado(Pessoa aluno){
 		boolean existe = false;
 		for(Pessoa a: alunos){
