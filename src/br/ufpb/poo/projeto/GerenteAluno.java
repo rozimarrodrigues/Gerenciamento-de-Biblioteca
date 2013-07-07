@@ -20,6 +20,9 @@ public class GerenteAluno {
 		if(cpfJaCadastrado(aluno)){
 			throw new CampoInvalidoException("CPF ja cadastrado!!!");
 		}
+		if(aluno.getNome()==null){
+			throw new CampoInvalidoException("Aluno sem nome!!!");
+		}
 		alunos.add(aluno);
 		
 	}

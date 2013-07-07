@@ -33,6 +33,7 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
+		aluno.setNome("Rair");
 		aluno.setMatricula(80911005);
 		aluno.setCpf("05739887479");
 		biblioteca.adicionaAluno(aluno);
@@ -74,6 +75,15 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
 		aluno.setMatricula(80911005);
+		aluno.setCpf("04738978497");
+		biblioteca.adicionaAluno(aluno);
+	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarAlunoSemNome(){
+		Aluno aluno = new Aluno();
+		aluno.setMatricula(80921004);
+		aluno.setCurso("Computação");
 		aluno.setCpf("04738978497");
 		biblioteca.adicionaAluno(aluno);
 	}
