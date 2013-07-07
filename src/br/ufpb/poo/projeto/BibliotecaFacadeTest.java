@@ -35,6 +35,7 @@ public class BibliotecaFacadeTest {
 		aluno = new Aluno();
 		aluno.setNome("Rair");
 		aluno.setMatricula(80911005);
+		aluno.setCurso("Computação");
 		aluno.setCpf("05739887479");
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());

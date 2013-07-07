@@ -14,14 +14,17 @@ public class GerenteAluno {
 		if(aluno.getMatricula() == 0){
 			throw new CampoInvalidoException("Aluno sem matricula!!!");
 		}
-		if(aluno.getCpf()==null){
+		if(aluno.getCpf() == null){
 			throw new CampoInvalidoException("Aluno sem CPF!!!");
 		}
 		if(cpfJaCadastrado(aluno)){
 			throw new CampoInvalidoException("CPF ja cadastrado!!!");
 		}
-		if(aluno.getNome()==null){
+		if(aluno.getNome() == null){
 			throw new CampoInvalidoException("Aluno sem nome!!!");
+		}
+		if(aluno.getCurso() == null){
+			throw new CampoInvalidoException("Aluno sem curso!!!");
 		}
 		alunos.add(aluno);
 		
