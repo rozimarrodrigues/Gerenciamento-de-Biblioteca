@@ -23,9 +23,7 @@ public class BibliotecaFacadeTest {
 
 	@Test(expected = AlunoJaCadastradoException.class)
 	public void adicionaAlunoNovamente(){
-		Aluno aluno = new Aluno();
-		aluno.setMatricula(80921004);
-		aluno.setCpf("04738978497");
+		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		biblioteca.adicionaAluno(aluno);
 	}
