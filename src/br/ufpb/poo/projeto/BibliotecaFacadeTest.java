@@ -16,9 +16,7 @@ public class BibliotecaFacadeTest {
 
 	@Test // GerenteAluno - Rozimar Rodrigues
 	public void adicionarAluno() {
-		Aluno aluno = new Aluno();
-		aluno.setMatricula(80921004);
-		aluno.setCpf("04738978497");
+		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(1,biblioteca.quantidadeAlunos());
 	}
