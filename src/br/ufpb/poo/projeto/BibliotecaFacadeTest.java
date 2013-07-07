@@ -103,7 +103,6 @@ public class BibliotecaFacadeTest {
 	 * TODO testes para o GerenteProfessor
 	 */
 
-
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
 		aluno.setNome("Rozimar");
