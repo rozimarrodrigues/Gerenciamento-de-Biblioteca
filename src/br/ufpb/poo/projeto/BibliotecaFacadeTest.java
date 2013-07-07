@@ -67,6 +67,16 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarAlunoComCpfJaCadastrado(){
+		Aluno aluno = criarAlunoPadrao();
+		biblioteca.adicionaAluno(aluno);
+		aluno = new Aluno();
+		aluno.setMatricula(80911005);
+		aluno.setCpf("04738978497");
+		biblioteca.adicionaAluno(aluno);
+	}
 
 	// GerenteProfessor - Emanuel Rair
 	/*
