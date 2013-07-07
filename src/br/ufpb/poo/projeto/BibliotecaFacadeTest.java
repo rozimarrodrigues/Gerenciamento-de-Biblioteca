@@ -30,9 +30,7 @@ public class BibliotecaFacadeTest {
 
 	@Test
 	public void adicionaAlunoDiferente() {
-		Aluno aluno = new Aluno();
-		aluno.setMatricula(80911004);
-		aluno.setCpf("04738978497");
+		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
 		aluno.setMatricula(80911005);
