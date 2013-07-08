@@ -137,6 +137,15 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaFuncionario(funcionario);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
+	
+	@Test
+	public void adicionarFuncionarioDiferente(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		funcionario = criarFuncionarioAuxiliar();
+		biblioteca.adicionaFuncionario(funcionario);
+		assertEquals(2, biblioteca.quantidadeFuncionarios());
+	}
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
