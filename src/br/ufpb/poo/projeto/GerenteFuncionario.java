@@ -11,6 +11,9 @@ public class GerenteFuncionario {
 		if(funcionarioJaCadastrado(funcionario)){
 			throw new FuncionarioJaCadastradoException("Funcionario ja cadastrado!!!");
 		}
+		if(funcionario.getNome() == null){
+			throw new CampoInvalidoException("Funcionario sem nome!!!");
+		}
 		funcionarios.add(funcionario);
 	}
 
