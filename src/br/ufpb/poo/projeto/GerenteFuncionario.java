@@ -14,6 +14,9 @@ public class GerenteFuncionario {
 		if(funcionario.getNome() == null){
 			throw new CampoInvalidoException("Funcionario sem nome!!!");
 		}
+		if(funcionario.getMatricula() == 0){
+			throw new CampoInvalidoException("Funcionario sem matricula!!!");
+		}
 		funcionarios.add(funcionario);
 	}
 
