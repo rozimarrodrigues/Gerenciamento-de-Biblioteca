@@ -8,22 +8,28 @@ public class GerenteAluno {
 	private List<Aluno> alunos = new ArrayList<Aluno>(); 
 
 	public void addAluno(Aluno aluno){
-		if(alunoJaCadastrado(aluno)){
-			throw new AlunoJaCadastradoException("Aluno ja cadastrado!!!");
-		}
 		if(aluno.getMatricula() == 0){
+			System.out.println("aluno sem matricula");
 			throw new CampoInvalidoException("Aluno sem matricula!!!");
 		}
-		if(aluno.getCpf() == null){
+		if(alunoJaCadastrado(aluno)){
+			System.out.println("aluno já cadastrado");
+			throw new AlunoJaCadastradoException("Aluno ja cadastrado!!!");
+		}
+		if(aluno.getNome() == null){
+			System.out.println("aluno sem nome");
+			throw new CampoInvalidoException("Aluno sem nome!!!");
+		}
+		if(aluno.cpf().getCpf() == null){
+			System.out.println("aluno sem cpf");
 			throw new CampoInvalidoException("Aluno sem CPF!!!");
 		}
 		if(cpfJaCadastrado(aluno)){
+			System.out.println("cpf ja cadastrado");
 			throw new CampoInvalidoException("CPF ja cadastrado!!!");
 		}
-		if(aluno.getNome() == null){
-			throw new CampoInvalidoException("Aluno sem nome!!!");
-		}
 		if(aluno.getCurso() == null){
+			System.out.println("aluno sem curso");
 			throw new CampoInvalidoException("Aluno sem curso!!!");
 		}
 		alunos.add(aluno);
@@ -32,7 +38,7 @@ public class GerenteAluno {
 	private boolean cpfJaCadastrado(Aluno aluno) {
 		boolean cadastrado = false;
 		for(Pessoa a: alunos){
-			if(a.getCpf().equals(aluno.getCpf())){
+			if(a.cpf().getCpf().equals(aluno.cpf().getCpf())){
 				cadastrado = true;
 			}
 		}

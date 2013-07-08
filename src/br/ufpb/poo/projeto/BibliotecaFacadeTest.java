@@ -33,11 +33,7 @@ public class BibliotecaFacadeTest {
 	public void adicionaAlunoDiferente() {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
-		aluno = new Aluno();
-		aluno.setNome("Rair");
-		aluno.setMatricula(80911005);
-		aluno.setCurso("Computação");
-		aluno.setCpf("057.398.874-79");
+		aluno = criarAlunoAuxiliar();
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
@@ -67,7 +63,8 @@ public class BibliotecaFacadeTest {
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemCpf(){
-		Aluno aluno = new Aluno();
+		Aluno aluno = criarAlunoPadrao();
+		aluno.setCpf(null);
 		biblioteca.adicionaAluno(aluno);
 	}
 
@@ -76,7 +73,9 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
+		aluno.setNome("Rair");
 		aluno.setMatricula(80911005);
+		aluno.setCurso("Computação");
 		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 	}
@@ -95,7 +94,7 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = new Aluno();
 		aluno.setNome("Rozimar");
 		aluno.setMatricula(80921004);
-		aluno.setCpf("04738978497");
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 	}
 
@@ -103,7 +102,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarAlunoComCpfValido(){
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
-		assertTrue(biblioteca.getAluno(0).getCpf().validarCpf());
+		assertTrue(biblioteca.getAluno(0).cpf().validarCpf());
 	}
 
 	// GerenteProfessor - Emanuel Rair
@@ -117,6 +116,16 @@ public class BibliotecaFacadeTest {
 		aluno.setMatricula(80921004);
 		aluno.setCurso("Computação");
 		aluno.setCpf("047.389.784-97");
+		return aluno;
+	}
+	
+	private Aluno criarAlunoAuxiliar() {
+		Aluno aluno;
+		aluno = new Aluno();
+		aluno.setNome("Rair");
+		aluno.setMatricula(80911005);
+		aluno.setCurso("Computação");
+		aluno.setCpf("057.398.874-79");
 		return aluno;
 	}
 }

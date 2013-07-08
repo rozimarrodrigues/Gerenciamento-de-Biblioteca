@@ -18,7 +18,7 @@ public class Pessoa {
 		return nome;
 	}
 	
-	public Cpf getCpf(){
+	public Cpf cpf(){
 		return cpf;
 	}
 	
