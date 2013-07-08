@@ -81,10 +81,12 @@ public class BibliotecaFacadeTest {
 		assertTrue(biblioteca.getAluno(0).cpf().validarCpf());
 	}
 	
-	/*@Test//(expected = CampoInvalidoException.class)
+	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoComCpfInvalido(){
-		
-	}*/
+		Aluno aluno = criarAlunoPadrao();
+		aluno.setCpf("12345");
+		biblioteca.adicionaAluno(aluno);
+	}
 	
 	@Test
 	public void removerAluno(){
