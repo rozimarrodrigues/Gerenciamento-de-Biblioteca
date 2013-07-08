@@ -97,6 +97,13 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf("04738978497");
 		biblioteca.adicionaAluno(aluno);
 	}
+	
+	@Test
+	public void adicionarAlunoComCpfValido(){
+		Aluno aluno = criarAlunoPadrao();
+		biblioteca.adicionaAluno(aluno);
+		assertTrue(biblioteca.getAluno(0).getCpf().validarCpf());
+	}
 
 	// GerenteProfessor - Emanuel Rair
 	/*
