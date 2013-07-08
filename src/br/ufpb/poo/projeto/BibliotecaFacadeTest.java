@@ -153,6 +153,12 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaFuncionario(funcionario);
 	}
 	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarFuncionarioSemMatricula(){
+		Funcionario funcionario = new Funcionario();
+		biblioteca.adicionaFuncionario(funcionario);
+	}
+	
 	//TODO Testes para o GerenteProfessor - Emanuel Rair
 	//TODO Testes para o GerenteLivro - Emanuel Rair
 
