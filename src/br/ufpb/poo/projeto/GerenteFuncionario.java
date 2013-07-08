@@ -12,7 +12,7 @@ public class GerenteFuncionario {
 	}
 
 	public int quantidadeDefuncionarios() {
-		return 0;
+		return funcionarios.size();
 	}
 
 }
