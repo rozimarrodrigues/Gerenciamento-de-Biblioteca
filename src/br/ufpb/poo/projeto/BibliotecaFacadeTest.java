@@ -104,6 +104,17 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
 	}
+	
+	@Test
+	public void removerAlunoDiferente(){
+		Aluno aluno1 = criarAlunoPadrao();
+		biblioteca.adicionaAluno(aluno1);
+		Aluno aluno2 = criarAlunoAuxiliar();
+		biblioteca.adicionaAluno(aluno2);
+		biblioteca.removeAluno(aluno1);
+		biblioteca.removeAluno(aluno2);
+		assertEquals(0, biblioteca.quantidadeAlunos());
+	}
 
 	// GerenteProfessor - Emanuel Rair
 	/*
