@@ -26,6 +26,9 @@ public class GerenteAluno {
 		if(aluno.getCurso() == null){
 			throw new CampoInvalidoException("Aluno sem curso!!!");
 		}
+		if(!aluno.cpf().validarCpf()){
+			throw new CampoInvalidoException("CPF invalido!!!");
+		}
 		alunos.add(aluno);
 	}
 	private boolean cpfJaCadastrado(Aluno aluno) {
