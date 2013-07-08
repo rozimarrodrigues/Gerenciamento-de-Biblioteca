@@ -154,4 +154,13 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf("057.398.874-79");
 		return aluno;
 	}
+	
+	private Funcionario criarFuncionarioPadrao() {
+		Funcionario funcionario = new Funcionario();
+		funcionario.setNome("Dayane");
+		funcionario.setMatricula(175632);
+		funcionario.setFuncao("Bibliotecario");
+		funcionario.setCpf("024.769.134-35");
+		return funcionario;
+	}
 }
