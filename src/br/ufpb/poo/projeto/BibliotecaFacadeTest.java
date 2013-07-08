@@ -131,6 +131,12 @@ public class BibliotecaFacadeTest {
 		assertEquals(1, biblioteca.quantidadeFuncionarios());
 	}
 	
+	@Test(expected = FuncionarioJaCadastradoException.class)
+	public void adicionarFuncionarioNovamente(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		biblioteca.adicionaFuncionario(funcionario);
+	}
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
