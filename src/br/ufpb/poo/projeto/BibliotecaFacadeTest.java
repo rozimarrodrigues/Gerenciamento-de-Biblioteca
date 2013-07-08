@@ -124,6 +124,13 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 	}
 	
+	@Test // GerenteFuncionario - Rozimar Rodrigues
+	public void adicionarFuncionario(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		assertEquals(1, biblioteca.quantidadeFuncionarios());
+	}
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor

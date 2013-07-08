@@ -13,7 +13,7 @@ public class BibliotecaFacade {
 		return gerenteAluno.quantidadeDeAlunos();
 	}
 
-	public void removeAluno(Pessoa aluno) {
+	public void removeAluno(Aluno aluno) {
 		gerenteAluno.removerAluno(aluno);
 		
 	}

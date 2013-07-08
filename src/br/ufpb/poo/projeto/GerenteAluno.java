@@ -52,9 +52,12 @@ public class GerenteAluno {
 	public int quantidadeDeAlunos() {
 		return alunos.size();
 	}
-	public void removerAluno(Pessoa aluno) {
+	public void removerAluno(Aluno aluno) {
 		if(quantidadeDeAlunos() == 0){
 			throw new AlunoInexistenteException("Não existe aluno para remover!!!");
+		}
+		if(!exiteAluno(aluno)){
+			throw new AlunoInexistenteException("Aluno inexistente!!!");
 		}
 		alunos.remove(aluno);
 	}
