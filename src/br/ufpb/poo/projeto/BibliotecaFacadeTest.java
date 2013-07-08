@@ -74,7 +74,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaAluno(aluno);
 	}
 
-	@Test
+	@Test // Validar CPF do tipo "000.000.000-00"
 	public void adicionarAlunoComCpfValido(){
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
