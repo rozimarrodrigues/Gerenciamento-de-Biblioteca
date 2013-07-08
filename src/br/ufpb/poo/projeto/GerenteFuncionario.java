@@ -14,6 +14,16 @@ public class GerenteFuncionario {
 		funcionarios.add(funcionario);
 	}
 
+	private boolean funcionarioJaCadastrado(Funcionario funcionario) {
+		boolean cadastrado = false;
+		for (Funcionario f : funcionarios) {
+			if(f.equals(funcionario)){
+				cadastrado = true;
+			}
+		}
+		return cadastrado;
+	}
+
 	public int quantidadeDefuncionarios() {
 		return funcionarios.size();
 	}
