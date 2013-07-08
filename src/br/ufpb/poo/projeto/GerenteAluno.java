@@ -61,5 +61,15 @@ public class GerenteAluno {
 	public Pessoa getAluno(int pos) {
 		return alunos.get(pos);
 	}
+	
+	public boolean exiteAluno(Aluno aluno){
+		boolean existe = false;
+		for(Aluno a :alunos){
+			if(a.equals(aluno)){
+				existe = true;
+			}
+		}
+		return existe;
+	}
 
 }

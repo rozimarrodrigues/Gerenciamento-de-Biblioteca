@@ -115,7 +115,15 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno2);
 		assertEquals(0, biblioteca.quantidadeAlunos());
 	}
-
+	
+	@Test(expected = AlunoInexistenteException.class)
+	public void removerAlunoInexstente(){
+		Aluno aluno = criarAlunoPadrao();
+		biblioteca.adicionaAluno(aluno);
+		aluno = criarAlunoAuxiliar();
+		biblioteca.removeAluno(aluno);
+	}
+	
 	// GerenteProfessor - Emanuel Rair
 	/*
 	 * TODO testes para o GerenteProfessor
