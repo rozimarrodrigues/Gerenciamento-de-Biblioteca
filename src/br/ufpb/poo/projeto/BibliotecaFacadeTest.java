@@ -37,7 +37,7 @@ public class BibliotecaFacadeTest {
 		aluno.setNome("Rair");
 		aluno.setMatricula(80911005);
 		aluno.setCurso("Computação");
-		aluno.setCpf("05739887479");
+		aluno.setCpf("057.398.874-79");
 		biblioteca.adicionaAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
@@ -70,26 +70,26 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = new Aluno();
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoComCpfJaCadastrado(){
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		aluno = new Aluno();
 		aluno.setMatricula(80911005);
-		aluno.setCpf("04738978497");
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemNome(){
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(80921004);
 		aluno.setCurso("Computação");
-		aluno.setCpf("04738978497");
+		aluno.setCpf("047.389.784-97");
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemCurso(){
 		Aluno aluno = new Aluno();
@@ -98,7 +98,7 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf("04738978497");
 		biblioteca.adicionaAluno(aluno);
 	}
-	
+
 	@Test
 	public void adicionarAlunoComCpfValido(){
 		Aluno aluno = criarAlunoPadrao();
@@ -116,7 +116,7 @@ public class BibliotecaFacadeTest {
 		aluno.setNome("Rozimar");
 		aluno.setMatricula(80921004);
 		aluno.setCurso("Computação");
-		aluno.setCpf("04738978497");
+		aluno.setCpf("047.389.784-97");
 		return aluno;
 	}
 }

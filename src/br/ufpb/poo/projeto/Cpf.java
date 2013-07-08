@@ -45,4 +45,11 @@ public class Cpf {
 		}
 		return valido;
 	}
+	
+	
+	public static void main(String[] args) {
+		Cpf c = new Cpf();
+		c.setCpf("057.968.154-82");
+		System.out.println(c.validarCpf());
+	}
 }

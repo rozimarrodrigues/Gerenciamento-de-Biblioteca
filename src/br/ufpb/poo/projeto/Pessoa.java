@@ -6,7 +6,8 @@ public class Pessoa {
 	private Cpf cpf;
 
 	public Pessoa() {
-		super();
+		nome = null;
+		cpf = new Cpf();
 	}
 
 	public void setNome(String nome) {
