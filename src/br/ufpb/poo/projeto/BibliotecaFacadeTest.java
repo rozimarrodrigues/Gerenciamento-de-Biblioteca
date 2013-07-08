@@ -18,66 +18,66 @@ public class BibliotecaFacadeTest {
 	@Test // GerenteAluno - Rozimar Rodrigues
 	public void adicionarAluno() {
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		assertEquals(1,biblioteca.quantidadeAlunos());
 	}
 
 	@Test(expected = AlunoJaCadastradoException.class)
-	public void adicionaAlunoNovamente(){
+	public void adicionarAlunoNovamente(){
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 
 	@Test
-	public void adicionaAlunoDiferente() {
+	public void adicionarAlunoDiferente() {
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		aluno = criarAlunoAuxiliar();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemMatricula(){
 		Aluno aluno = new Aluno();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemCpf(){
 		Aluno aluno = criarAlunoPadrao();
 		aluno.setCpf(null);
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoComCpfJaCadastrado(){
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		aluno = criarAlunoAuxiliar();
 		aluno.setCpf("047.389.784-97");//Mesmo CPF do alunoPadrao
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemNome(){
 		Aluno aluno = criarAlunoAuxiliar();
 		aluno.setNome(null);
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemCurso(){
 		Aluno aluno = criarAlunoAuxiliar();
 		aluno.setCurso(null);
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 
 	@Test // Validar CPF do tipo "000.000.000-00"
 	public void adicionarAlunoComCpfValido(){
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		assertTrue(biblioteca.getAluno(0).cpf().validarCpf());
 	}
 	
@@ -85,13 +85,13 @@ public class BibliotecaFacadeTest {
 	public void adicionarAlunoComCpfInvalido(){
 		Aluno aluno = criarAlunoPadrao();
 		aluno.setCpf("12345");
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 	}
 	
 	@Test
 	public void removerAluno(){
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		assertEquals("Esperasse que não tenha aluno",
 				0,biblioteca.quantidadeAlunos());
@@ -100,7 +100,7 @@ public class BibliotecaFacadeTest {
 	@Test(expected = AlunoInexistenteException.class)
 	public void removerAlunoNovamente(){
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
 	}
@@ -108,9 +108,9 @@ public class BibliotecaFacadeTest {
 	@Test
 	public void removerAlunoDiferente(){
 		Aluno aluno1 = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno1);
+		biblioteca.adicionarAluno(aluno1);
 		Aluno aluno2 = criarAlunoAuxiliar();
-		biblioteca.adicionaAluno(aluno2);
+		biblioteca.adicionarAluno(aluno2);
 		biblioteca.removeAluno(aluno1);
 		biblioteca.removeAluno(aluno2);
 		assertEquals(0, biblioteca.quantidadeAlunos());
@@ -119,7 +119,7 @@ public class BibliotecaFacadeTest {
 	@Test(expected = AlunoInexistenteException.class)
 	public void removerAlunoInexstente(){
 		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
+		biblioteca.adicionarAluno(aluno);
 		aluno = criarAlunoAuxiliar();
 		biblioteca.removeAluno(aluno);
 	}

@@ -4,7 +4,7 @@ public class BibliotecaFacade {
 
 	private GerenteAluno gerenteAluno = new GerenteAluno();
 	
-	public void adicionaAluno(Aluno aluno) {
+	public void adicionarAluno(Aluno aluno) {
 		gerenteAluno.addAluno(aluno);
 		
 	}
@@ -20,6 +20,14 @@ public class BibliotecaFacade {
 
 	public Pessoa getAluno(int pos) {
 		return gerenteAluno.getAluno(pos);
+	}
+
+	public void adicionaFuncionario(Funcionario funcionario) {
+		gerenteFuncionario.addFuncionario(funcionario);
+	}
+
+	public int quantidadeFuncionarios() {
+		return gerenteFuncionario.quantidadeDefuncionarios();
 	}
 	
 
