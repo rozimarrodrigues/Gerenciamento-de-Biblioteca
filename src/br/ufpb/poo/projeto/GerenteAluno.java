@@ -56,5 +56,8 @@ public class GerenteAluno {
 		}
 		alunos.remove(aluno);
 	}
+	public Pessoa getAluno(int pos) {
+		return alunos.get(pos);
+	}
 
 }
