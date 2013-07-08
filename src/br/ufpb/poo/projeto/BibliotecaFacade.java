@@ -17,6 +17,10 @@ public class BibliotecaFacade {
 		gerenteAluno.removerAluno(aluno);
 		
 	}
+
+	public Pessoa getAluno(int pos) {
+		return gerenteAluno.getAluno(pos);
+	}
 	
 
 }
