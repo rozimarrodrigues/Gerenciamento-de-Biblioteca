@@ -146,10 +146,9 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaFuncionario(funcionario);
 		assertEquals(2, biblioteca.quantidadeFuncionarios());
 	}
-	// GerenteProfessor - Emanuel Rair
-	/*
-	 * TODO testes para o GerenteProfessor
-	 */
+	
+	//TODO Testes para o GerenteProfessor - Emanuel Rair
+	//TODO Testes para o GerenteLivro - Emanuel Rair
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
@@ -176,6 +175,16 @@ public class BibliotecaFacadeTest {
 		funcionario.setMatricula(175632);
 		funcionario.setFuncao("Bibliotecario");
 		funcionario.setCpf("024.769.134-35");
+		return funcionario;
+	}
+	
+	private Funcionario criarFuncionarioAuxiliar() {
+		Funcionario funcionario;
+		funcionario = new Funcionario();
+		funcionario.setNome("Marcos");
+		funcionario.setMatricula(175632);
+		funcionario.setFuncao("Bibliotecario");
+		funcionario.setCpf("015.657.367-00");
 		return funcionario;
 	}
 }
