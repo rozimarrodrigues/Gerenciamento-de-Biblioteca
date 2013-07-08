@@ -38,23 +38,6 @@ public class BibliotecaFacadeTest {
 		assertEquals(2,biblioteca.quantidadeAlunos());
 	}
 
-	@Test
-	public void removerAluno(){
-		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
-		biblioteca.removeAluno(aluno);
-		assertEquals("Esperasse que não tenha aluno",
-				0,biblioteca.quantidadeAlunos());
-	}
-
-	@Test(expected = AlunoInexistenteException.class)
-	public void removerAlunoNovamente(){
-		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionaAluno(aluno);
-		biblioteca.removeAluno(aluno);
-		biblioteca.removeAluno(aluno);
-	}
-
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemMatricula(){
 		Aluno aluno = new Aluno();
@@ -72,29 +55,22 @@ public class BibliotecaFacadeTest {
 	public void adicionarAlunoComCpfJaCadastrado(){
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
-		aluno = new Aluno();
-		aluno.setNome("Rair");
-		aluno.setMatricula(80911005);
-		aluno.setCurso("Computação");
-		aluno.setCpf("047.389.784-97");
+		aluno = criarAlunoAuxiliar();
+		aluno.setCpf("047.389.784-97");//Mesmo CPF do alunoPadrao
 		biblioteca.adicionaAluno(aluno);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemNome(){
-		Aluno aluno = new Aluno();
-		aluno.setMatricula(80921004);
-		aluno.setCurso("Computação");
-		aluno.setCpf("047.389.784-97");
+		Aluno aluno = criarAlunoAuxiliar();
+		aluno.setNome(null);
 		biblioteca.adicionaAluno(aluno);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoSemCurso(){
-		Aluno aluno = new Aluno();
-		aluno.setNome("Rozimar");
-		aluno.setMatricula(80921004);
-		aluno.setCpf("047.389.784-97");
+		Aluno aluno = criarAlunoAuxiliar();
+		aluno.setCurso(null);
 		biblioteca.adicionaAluno(aluno);
 	}
 
@@ -103,6 +79,28 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionaAluno(aluno);
 		assertTrue(biblioteca.getAluno(0).cpf().validarCpf());
+	}
+	
+	/*@Test//(expected = CampoInvalidoException.class)
+	public void adicionarAlunoComCpfInvalido(){
+		
+	}*/
+	
+	@Test
+	public void removerAluno(){
+		Aluno aluno = criarAlunoPadrao();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		assertEquals("Esperasse que não tenha aluno",
+				0,biblioteca.quantidadeAlunos());
+	}
+
+	@Test(expected = AlunoInexistenteException.class)
+	public void removerAlunoNovamente(){
+		Aluno aluno = criarAlunoPadrao();
+		biblioteca.adicionaAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		biblioteca.removeAluno(aluno);
 	}
 
 	// GerenteProfessor - Emanuel Rair
