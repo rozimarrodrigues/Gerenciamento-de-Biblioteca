@@ -3,7 +3,7 @@ package br.ufpb.poo.projeto;
 public class Pessoa {
 
 	private String nome;
-	private String cpf;
+	private Cpf cpf;
 
 	public Pessoa() {
 		super();
@@ -17,12 +17,12 @@ public class Pessoa {
 		return nome;
 	}
 	
-	public String getCpf(){
+	public Cpf getCpf(){
 		return cpf;
 	}
 	
 	public void setCpf(String cpf){
-		this.cpf = cpf;
+		this.cpf.setCpf(cpf);
 	}
 
 }
