@@ -9,31 +9,24 @@ public class GerenteAluno {
 
 	public void addAluno(Aluno aluno){
 		if(aluno.getMatricula() == 0){
-			System.out.println("aluno sem matricula");
 			throw new CampoInvalidoException("Aluno sem matricula!!!");
 		}
 		if(alunoJaCadastrado(aluno)){
-			System.out.println("aluno já cadastrado");
 			throw new AlunoJaCadastradoException("Aluno ja cadastrado!!!");
 		}
 		if(aluno.getNome() == null){
-			System.out.println("aluno sem nome");
 			throw new CampoInvalidoException("Aluno sem nome!!!");
 		}
 		if(aluno.cpf().getCpf() == null){
-			System.out.println("aluno sem cpf");
 			throw new CampoInvalidoException("Aluno sem CPF!!!");
 		}
 		if(cpfJaCadastrado(aluno)){
-			System.out.println("cpf ja cadastrado");
 			throw new CampoInvalidoException("CPF ja cadastrado!!!");
 		}
 		if(aluno.getCurso() == null){
-			System.out.println("aluno sem curso");
 			throw new CampoInvalidoException("Aluno sem curso!!!");
 		}
 		alunos.add(aluno);
-		
 	}
 	private boolean cpfJaCadastrado(Aluno aluno) {
 		boolean cadastrado = false;
