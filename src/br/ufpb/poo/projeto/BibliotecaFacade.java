@@ -3,7 +3,7 @@ package br.ufpb.poo.projeto;
 public class BibliotecaFacade {
 
 	private GerenteAluno gerenteAluno = new GerenteAluno();
-	private GerenteFuncionario gerenteFuncionario;
+	private GerenteFuncionario gerenteFuncionario = new GerenteFuncionario();
 	
 	public void adicionarAluno(Aluno aluno) {
 		gerenteAluno.addAluno(aluno);
