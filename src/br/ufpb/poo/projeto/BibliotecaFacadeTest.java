@@ -147,6 +147,12 @@ public class BibliotecaFacadeTest {
 		assertEquals(2, biblioteca.quantidadeFuncionarios());
 	}
 	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarFuncionarioSemNome(){
+		Funcionario funcionario = new Funcionario();
+		biblioteca.adicionaFuncionario(funcionario);
+	}
+	
 	//TODO Testes para o GerenteProfessor - Emanuel Rair
 	//TODO Testes para o GerenteLivro - Emanuel Rair
 
