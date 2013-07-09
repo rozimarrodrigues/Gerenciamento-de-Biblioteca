@@ -15,7 +15,7 @@ public class BibliotecaFacadeTest {
 		biblioteca = new BibliotecaFacade(); 
 	}
 
-	@Test // GerenteAluno - Rozimar Rodrigues
+	@Test 
 	public void adicionarAluno() {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionarAluno(aluno);
@@ -124,7 +124,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 	}
 	
-	@Test // GerenteFuncionario - Rozimar Rodrigues
+	@Test 
 	public void adicionarFuncionario(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
