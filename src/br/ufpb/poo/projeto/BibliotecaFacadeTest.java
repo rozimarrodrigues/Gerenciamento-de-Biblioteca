@@ -160,9 +160,6 @@ public class BibliotecaFacadeTest {
 		funcionario.setMatricula(0);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
-	//TODO Testes para o GerenteProfessor - Emanuel Rair
-	//TODO Testes para o GerenteLivro - Emanuel Rair
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
