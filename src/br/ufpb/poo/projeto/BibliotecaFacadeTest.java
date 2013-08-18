@@ -37,7 +37,10 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionarAluno(aluno);
 		aluno = criarAlunoAuxiliar();
 		biblioteca.adicionarAluno(aluno);
-		assertEquals(2,biblioteca.quantidadeAlunos());
+		
+		Aluno aux = biblioteca.getAluno(1);
+		assertEquals("Espera-se que o segundo aluno seja o alunoAuxiliar",
+				aluno, aux);
 	}
 
 	@Test(expected = CampoInvalidoException.class)
