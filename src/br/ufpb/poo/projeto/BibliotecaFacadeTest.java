@@ -9,13 +9,14 @@ import org.junit.Test;
 public class BibliotecaFacadeTest {
 
 	private BibliotecaFacade biblioteca;
+	private static final String CPF = "047.389.784-97"; 
 
 	@Before
 	public void iniciar(){
 		biblioteca = new BibliotecaFacade(); 
 	}
 
-	@Test 
+	@Test
 	public void adicionarAluno() {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionarAluno(aluno);
@@ -249,7 +250,7 @@ public class BibliotecaFacadeTest {
 		aluno.setNome("Rozimar");
 		aluno.setMatricula(80921004);
 		aluno.setCurso("Computação");
-		aluno.setCpf("047.389.784-97");
+		aluno.setCpf(CPF);
 		return aluno;
 	}
 	

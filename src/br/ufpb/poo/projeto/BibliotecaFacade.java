@@ -7,7 +7,6 @@ public class BibliotecaFacade {
 	
 	public void adicionarAluno(Aluno aluno) {
 		gerenteAluno.addAluno(aluno);
-		
 	}
 
 	public int quantidadeAlunos() {
