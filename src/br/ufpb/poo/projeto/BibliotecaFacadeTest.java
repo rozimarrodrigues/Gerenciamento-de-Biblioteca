@@ -160,6 +160,13 @@ public class BibliotecaFacadeTest {
 		funcionario.setMatricula(0);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarFuncionarioSemFuncao(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		funcionario.setFuncao(null);
+		biblioteca.adicionaFuncionario(funcionario);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
