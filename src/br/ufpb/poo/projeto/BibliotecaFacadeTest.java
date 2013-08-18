@@ -206,6 +206,14 @@ public class BibliotecaFacadeTest {
 		assertEquals("Esperasse que não tenha funcionario",
 				0,biblioteca.quantidadeFuncionarios());
 	}
+	
+	@Test(expected = FuncionarioInexistenteException.class)
+	public void removerFuncionarioNovamente(){
+		Aluno aluno = criarAlunoPadrao();
+		biblioteca.adicionarAluno(aluno);
+		biblioteca.removeAluno(aluno);
+		biblioteca.removeAluno(aluno);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
