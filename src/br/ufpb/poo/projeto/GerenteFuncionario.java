@@ -59,4 +59,8 @@ public class GerenteFuncionario {
 		}
 		return cadastrado;
 	}
+
+	public void removeFuncionario(Funcionario funcionario) {
+		funcionarios.remove(funcionario);
+	}
 }
