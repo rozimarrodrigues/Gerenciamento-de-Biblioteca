@@ -61,6 +61,9 @@ public class GerenteFuncionario {
 	}
 
 	public void removeFuncionario(Funcionario funcionario) {
+		if(quantidadeDefuncionarios() == 0){
+			throw new FuncionarioInexistenteException("Não existe funcionario para remover!!!");
+		}
 		funcionarios.remove(funcionario);
 	}
 }

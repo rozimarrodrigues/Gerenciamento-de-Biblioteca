@@ -209,10 +209,10 @@ public class BibliotecaFacadeTest {
 	
 	@Test(expected = FuncionarioInexistenteException.class)
 	public void removerFuncionarioNovamente(){
-		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionarAluno(aluno);
-		biblioteca.removeAluno(aluno);
-		biblioteca.removeAluno(aluno);
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		biblioteca.removeFuncionario(funcionario);
+		biblioteca.removeFuncionario(funcionario);
 	}
 
 	private Aluno criarAlunoPadrao() {
