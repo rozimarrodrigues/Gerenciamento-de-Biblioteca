@@ -26,6 +26,9 @@ public class GerenteFuncionario {
 		if(!funcionario.cpf().validarCpf()){
 			throw new CampoInvalidoException("Funcionario com CPF invalido!!!");
 		}
+		if(cpfJaCadastrado(funcionario)){
+			throw new CampoInvalidoException("Funcionario com CPF ja cadastrado!!!");
+		}
 		funcionarios.add(funcionario);
 	}
 
@@ -46,5 +49,14 @@ public class GerenteFuncionario {
 	public Funcionario getFuncionario(int pos) {
 		return funcionarios.get(pos);
 	}
-
+	
+	private boolean cpfJaCadastrado(Funcionario funcionario) {
+		boolean cadastrado = false;
+		for(Pessoa a: funcionarios){
+			if(a.cpf().getCpf().equals(funcionario.cpf().getCpf())){
+				cadastrado = true;
+			}
+		}
+		return cadastrado;
+	}
 }

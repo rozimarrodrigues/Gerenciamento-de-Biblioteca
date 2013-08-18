@@ -31,6 +31,7 @@ public class GerenteAluno {
 		}
 		alunos.add(aluno);
 	}
+	
 	private boolean cpfJaCadastrado(Aluno aluno) {
 		boolean cadastrado = false;
 		for(Pessoa a: alunos){
@@ -40,6 +41,7 @@ public class GerenteAluno {
 		}
 		return cadastrado;
 	}
+	
 	public boolean alunoJaCadastrado(Pessoa aluno){
 		boolean existe = false;
 		for(Pessoa a: alunos){
