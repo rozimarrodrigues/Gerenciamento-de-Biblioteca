@@ -151,7 +151,10 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaFuncionario(funcionario);
 		funcionario = criarFuncionarioAuxiliar();
 		biblioteca.adicionaFuncionario(funcionario);
-		assertEquals(2, biblioteca.quantidadeFuncionarios());
+		
+		Funcionario aux = biblioteca.getFuncionario(1);
+		assertEquals("Espera-se que o segundo funcionario seja o funcionarioAuxiliar",
+				funcionario, aux);
 	}
 	
 	@Test(expected = CampoInvalidoException.class)
