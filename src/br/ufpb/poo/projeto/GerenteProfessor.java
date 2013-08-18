@@ -11,4 +11,8 @@ public class GerenteProfessor {
 		professores.add(professor);
 	}
 
+	public Professor getProfessor(int pos){
+		return professores.get(pos);
+	}
+
 }
