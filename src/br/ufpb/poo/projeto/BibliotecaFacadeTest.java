@@ -197,6 +197,15 @@ public class BibliotecaFacadeTest {
 		funcionario.setCpf("024.769.134-35");//Mesmo CPF do funcionarioPadrao
 		biblioteca.adicionaFuncionario(funcionario);
 	}
+	
+	@Test
+	public void removerFuncionario(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		biblioteca.removeFuncionario(funcionario);
+		assertEquals("Esperasse que não tenha funcionario",
+				0,biblioteca.quantidadeFuncionarios());
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
