@@ -175,7 +175,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaFuncionario(funcionario);
 	}
 	
-	@Test()
+	@Test // Validar CPF do tipo "000.000.000-00"
 	public void adicionarFuncionarioComCpfValido(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);

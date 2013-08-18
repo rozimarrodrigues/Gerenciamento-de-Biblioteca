@@ -40,4 +40,8 @@ public class GerenteFuncionario {
 		return funcionarios.size();
 	}
 
+	public Funcionario getFuncionario(int pos) {
+		return funcionarios.get(pos);
+	}
+
 }

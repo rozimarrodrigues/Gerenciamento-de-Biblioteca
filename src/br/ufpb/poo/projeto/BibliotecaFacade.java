@@ -30,7 +30,10 @@ public class BibliotecaFacade {
 	public int quantidadeFuncionarios() {
 		return gerenteFuncionario.quantidadeDefuncionarios();
 	}
-	
 
+	public boolean validarCpf(int pos) {
+		boolean valido = false;
+		valido = gerenteFuncionario.getFuncionario(0).cpf().validarCpf();
+		return valido;
+	}
 }
-
