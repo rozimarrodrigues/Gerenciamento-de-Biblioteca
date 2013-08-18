@@ -214,6 +214,17 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeFuncionario(funcionario);
 		biblioteca.removeFuncionario(funcionario);
 	}
+	
+	@Test 
+	public void removerFucionarioDiferente(){
+		Funcionario funcionario1 = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario1);
+		Funcionario funcionario2 = criarFuncionarioAuxiliar();
+		biblioteca.adicionaFuncionario(funcionario2);
+		biblioteca.removeFuncionario(funcionario1);
+		biblioteca.removeFuncionario(funcionario2);
+		assertEquals(0, biblioteca.quantidadeFuncionarios());
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
