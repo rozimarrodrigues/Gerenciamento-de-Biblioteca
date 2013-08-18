@@ -36,4 +36,8 @@ public class BibliotecaFacade {
 		valido = gerenteFuncionario.getFuncionario(0).cpf().validarCpf();
 		return valido;
 	}
+
+	public void removeFuncionario(Funcionario funcionario) {
+		gerenteFuncionario.removeFuncionario(funcionario);
+	}
 }
