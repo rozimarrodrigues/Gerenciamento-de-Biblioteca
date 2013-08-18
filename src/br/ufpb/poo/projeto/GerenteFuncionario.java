@@ -23,6 +23,9 @@ public class GerenteFuncionario {
 		if(funcionario.cpf().getCpf() == null){
 			throw new CampoInvalidoException("Funcionario sem cpf");
 		}
+		if(!funcionario.cpf().validarCpf()){
+			throw new CampoInvalidoException("Funcionario com CPF invalido!!!");
+		}
 		funcionarios.add(funcionario);
 	}
 
