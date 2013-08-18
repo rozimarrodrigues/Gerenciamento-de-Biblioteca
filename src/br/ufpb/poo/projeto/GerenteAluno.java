@@ -77,4 +77,8 @@ public class GerenteAluno {
 		return existe;
 	}
 
+	public boolean validarCpfDeAluno() {
+		return getAluno(0).cpf().validarCpf();
+	}
+
 }

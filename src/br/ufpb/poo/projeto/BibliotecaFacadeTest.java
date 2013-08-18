@@ -84,7 +84,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarAlunoComCpfValido(){
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionarAluno(aluno);
-		assertTrue(biblioteca.getAluno(0).cpf().validarCpf());
+		assertTrue(biblioteca.validarCpfDeAluno());
 	}
 	
 	@Test(expected = CampoInvalidoException.class)
@@ -190,7 +190,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarFuncionarioComCpfValido(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
-		assertTrue(biblioteca.validarCpf(0));
+		assertTrue(biblioteca.validarCpfDeFuncionario(0));
 	}
 	
 	@Test(expected = CampoInvalidoException.class)
@@ -243,6 +243,11 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaFuncionario(funcionario);
 		funcionario = criarFuncionarioAuxiliar();
 		biblioteca.removeFuncionario(funcionario);
+	}
+	
+	@Test
+	public void adicionarProfessor(){
+		Professor professor = new Professor;
 	}
 
 	private Aluno criarAlunoPadrao() {

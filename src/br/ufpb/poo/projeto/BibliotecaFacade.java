@@ -30,10 +30,8 @@ public class BibliotecaFacade {
 		return gerenteFuncionario.quantidadeDefuncionarios();
 	}
 
-	public boolean validarCpf(int pos) {
-		boolean valido = false;
-		valido = gerenteFuncionario.getFuncionario(0).cpf().validarCpf();
-		return valido;
+	public boolean validarCpfDeFuncionario(int pos) {
+		return gerenteFuncionario.validarCpfDeFuncionario(pos);
 	}
 
 	public void removeFuncionario(Funcionario funcionario) {
@@ -42,5 +40,9 @@ public class BibliotecaFacade {
 
 	public Funcionario getFuncionario(int pos) {
 		return gerenteFuncionario.getFuncionario(pos);
+	}
+
+	public boolean validarCpfDeAluno() {
+		return gerenteAluno.validarCpfDeAluno();
 	}
 }
