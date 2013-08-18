@@ -19,7 +19,9 @@ public class BibliotecaFacadeTest {
 	public void adicionarAluno() {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionarAluno(aluno);
-		assertEquals(1,biblioteca.quantidadeAlunos());
+		
+		Aluno aux = biblioteca.getAluno(0);
+		assertEquals(aluno, aux);
 	}
 
 	@Test(expected = AlunoJaCadastradoException.class)

@@ -19,7 +19,7 @@ public class BibliotecaFacade {
 		
 	}
 
-	public Pessoa getAluno(int pos) {
+	public Aluno getAluno(int pos) {
 		return gerenteAluno.getAluno(pos);
 	}
 
