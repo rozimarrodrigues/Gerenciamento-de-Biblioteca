@@ -225,6 +225,14 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeFuncionario(funcionario2);
 		assertEquals(0, biblioteca.quantidadeFuncionarios());
 	}
+	
+	@Test(expected = FuncionarioInexistenteException.class)
+	public void removerFuncionarioInexistente(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		funcionario = criarFuncionarioAuxiliar();
+		biblioteca.removeFuncionario(funcionario);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();

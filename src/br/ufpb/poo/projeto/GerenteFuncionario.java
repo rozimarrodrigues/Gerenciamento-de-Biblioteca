@@ -64,6 +64,19 @@ public class GerenteFuncionario {
 		if(quantidadeDefuncionarios() == 0){
 			throw new FuncionarioInexistenteException("Não existe funcionario para remover!!!");
 		}
+		if(!exiteFuncionario(funcionario)){
+			throw new FuncionarioInexistenteException("Funcionario inexistente!!!");
+		}
 		funcionarios.remove(funcionario);
+	}
+
+	public boolean exiteFuncionario(Funcionario funcionario){
+		boolean existe = false;
+		for(Funcionario f :funcionarios){
+			if(f.equals(funcionario)){
+				existe = true;
+			}
+		}
+		return existe;
 	}
 }
