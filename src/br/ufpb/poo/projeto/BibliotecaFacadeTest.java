@@ -249,6 +249,9 @@ public class BibliotecaFacadeTest {
 	public void adicionarProfessor(){
 		Professor professor = new Professor();
 		biblioteca.adicionaProfessor(professor);
+		
+		Professor aux = biblioteca.getProfessor(0);  
+		assertEquals(professor, aux);
 	}
 
 	private Aluno criarAlunoPadrao() {
