@@ -167,6 +167,13 @@ public class BibliotecaFacadeTest {
 		funcionario.setFuncao(null);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarFuncionarioSemCpf(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		funcionario.setCpf(null);
+		biblioteca.adicionaFuncionario(funcionario);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
