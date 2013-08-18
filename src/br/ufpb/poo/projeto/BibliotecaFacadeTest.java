@@ -253,6 +253,13 @@ public class BibliotecaFacadeTest {
 		Professor aux = biblioteca.getProfessor(0);  
 		assertEquals(professor, aux);
 	}
+	
+	@Test(expected = ProfessorJaCadastradoException.class)
+	public void adicionarProfessorNovamente(){
+		Professor professor = new Professor();
+		biblioteca.adicionaProfessor(professor);
+		biblioteca.adicionaProfessor(professor);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
