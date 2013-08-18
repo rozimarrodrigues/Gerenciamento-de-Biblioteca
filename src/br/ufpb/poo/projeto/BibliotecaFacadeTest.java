@@ -130,7 +130,9 @@ public class BibliotecaFacadeTest {
 	public void adicionarFuncionario(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
-		assertEquals(1, biblioteca.quantidadeFuncionarios());
+		
+		Funcionario aux = biblioteca.getFuncionario(0);
+		assertEquals(funcionario, aux);
 	}
 	
 	@Test(expected = FuncionarioJaCadastradoException.class)

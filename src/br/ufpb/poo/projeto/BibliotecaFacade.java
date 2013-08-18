@@ -40,4 +40,8 @@ public class BibliotecaFacade {
 	public void removeFuncionario(Funcionario funcionario) {
 		gerenteFuncionario.removeFuncionario(funcionario);
 	}
+
+	public Funcionario getFuncionario(int pos) {
+		return gerenteFuncionario.getFuncionario(pos);
+	}
 }
