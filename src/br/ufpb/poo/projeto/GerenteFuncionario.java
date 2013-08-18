@@ -20,6 +20,9 @@ public class GerenteFuncionario {
 		if(funcionario.getFuncao() == null){
 			throw new CampoInvalidoException("Funcionario sem função");
 		}
+		if(funcionario.cpf().getCpf() == null){
+			throw new CampoInvalidoException("Funcionario sem cpf");
+		}
 		funcionarios.add(funcionario);
 	}
 
