@@ -62,7 +62,7 @@ public class BibliotecaFacadeTest {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionarAluno(aluno);
 		aluno = criarAlunoAuxiliar();
-		aluno.setCpf("047.389.784-97");//Mesmo CPF do alunoPadrao
+		aluno.setCpf(CPF);//Mesmo CPF do alunoPadrao
 		biblioteca.adicionarAluno(aluno);
 	}
 
