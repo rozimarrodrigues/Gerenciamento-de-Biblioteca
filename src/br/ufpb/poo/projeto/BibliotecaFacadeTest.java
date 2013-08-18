@@ -174,6 +174,13 @@ public class BibliotecaFacadeTest {
 		funcionario.setCpf(null);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
+	
+	@Test()
+	public void adicionarFuncionarioComCpfValido(){
+		Funcionario funcionario = criarFuncionarioPadrao();
+		biblioteca.adicionaFuncionario(funcionario);
+		assertTrue(biblioteca.validarCpf(0));
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
