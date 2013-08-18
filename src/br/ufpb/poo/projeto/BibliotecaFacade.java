@@ -45,4 +45,8 @@ public class BibliotecaFacade {
 	public boolean validarCpfDeAluno() {
 		return gerenteAluno.validarCpfDeAluno();
 	}
+
+	public void adicionaProfessor(Professor professor) {
+		gerenteProfessor.addProfessor(professor);		
+	}
 }

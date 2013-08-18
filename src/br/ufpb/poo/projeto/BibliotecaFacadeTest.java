@@ -248,6 +248,7 @@ public class BibliotecaFacadeTest {
 	@Test
 	public void adicionarProfessor(){
 		Professor professor = new Professor();
+		biblioteca.adicionaProfessor(professor);
 	}
 
 	private Aluno criarAlunoPadrao() {
