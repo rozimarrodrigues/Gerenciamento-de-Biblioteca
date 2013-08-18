@@ -205,7 +205,7 @@ public class BibliotecaFacadeTest {
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
 		funcionario = criarFuncionarioAuxiliar();
-		funcionario.setCpf("024.769.134-35");//Mesmo CPF do funcionarioPadrao
+		funcionario.setCpf(CPF);//Mesmo CPF do funcionarioPadrao
 		biblioteca.adicionaFuncionario(funcionario);
 	}
 	
@@ -269,7 +269,7 @@ public class BibliotecaFacadeTest {
 		funcionario.setNome("Dayane");
 		funcionario.setMatricula(175632);
 		funcionario.setFuncao("Bibliotecario");
-		funcionario.setCpf("024.769.134-35");
+		funcionario.setCpf(CPF);
 		return funcionario;
 	}
 	
