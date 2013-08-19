@@ -8,6 +8,9 @@ public class GerenteProfessor {
 	private List<Professor> professores = new ArrayList<Professor>(); 
 
 	public void addProfessor(Professor professor) {
+		if(professor.getMatricula() == 0){
+			throw new CampoInvalidoException("Professor sem matricula!!!");
+		}
 		if(professorJaCadastrado(professor)){
 			throw new ProfessorJaCadastradoException("Professor ja cadastrado!!!");
 		}

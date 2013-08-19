@@ -328,6 +328,7 @@ public class BibliotecaFacadeTest {
 		Professor professor;
 		professor = new Professor();
 		professor.setNome("Leopoldo");
+		professor.setMatricula(80912123);
 		professor.setCpf(CPF);
 		return professor;
 	}
@@ -336,6 +337,7 @@ public class BibliotecaFacadeTest {
 		Professor professor;
 		professor = new Professor();
 		professor.setNome("Luiz");
+		professor.setMatricula(80921005);
 		professor.setCpf("123.345.456-45");
 		return professor;
 	}

@@ -48,7 +48,7 @@ public class BibliotecaFacade {
 	}
 
 	public void adicionaProfessor(Professor professor) {
-		gerenteProfessor .addProfessor(professor);		
+		gerenteProfessor.addProfessor(professor);		
 	}
 
 	public Professor getProfessor(int pos) {
