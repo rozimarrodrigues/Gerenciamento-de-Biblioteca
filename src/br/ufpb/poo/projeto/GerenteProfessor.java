@@ -17,6 +17,9 @@ public class GerenteProfessor {
 		if(professor.getNome() == null){
 			throw new CampoInvalidoException("Professor sem nome!!!");
 		}
+		if(professor.getDepartamento() == null){
+			throw new CampoInvalidoException("Professor sem departamento!!!");
+		}
 		professores.add(professor);
 	}
 

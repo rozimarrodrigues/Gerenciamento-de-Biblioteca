@@ -289,7 +289,7 @@ public class BibliotecaFacadeTest {
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarProfessorSemDepartamento(){
 		Professor professor = criarProfessorPadrao();
-		professor.setDepartamento("DCE");
+		professor.setDepartamento(null);
 		biblioteca.adicionaProfessor(professor);
 	}
 
@@ -337,6 +337,7 @@ public class BibliotecaFacadeTest {
 		professor.setNome("Leopoldo");
 		professor.setMatricula(80912123);
 		professor.setCpf(CPF);
+		professor.setDepartamento("DCE");
 		return professor;
 	}
 	
@@ -346,6 +347,7 @@ public class BibliotecaFacadeTest {
 		professor.setNome("Luiz");
 		professor.setMatricula(80921005);
 		professor.setCpf("123.345.456-45");
+		professor.setDepartamento("Educação");
 		return professor;
 	}
 }
