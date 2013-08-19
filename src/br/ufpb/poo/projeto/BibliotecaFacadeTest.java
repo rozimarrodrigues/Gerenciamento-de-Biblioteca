@@ -263,7 +263,13 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionarProfessorDiferente(){
+		Professor professor = criarProfessorPadrao();
+		biblioteca.adicionaProfessor(professor);
+		professor = criarProfessorAuxiliar();
+		biblioteca.adicionaProfessor(professor);
 		
+		Professor aux = biblioteca.getProfessor(1);
+		assertEquals(professor, aux);
 	}
 
 	private Aluno criarAlunoPadrao() {
@@ -307,6 +313,15 @@ public class BibliotecaFacadeTest {
 	private Professor criarProfessorPadrao(){
 		Professor professor;
 		professor = new Professor();
+		professor.setCpf(CPF);
+		//TODO
+		return professor;
+	}
+	
+	private Professor criarProfessorAuxiliar(){
+		Professor professor;
+		professor = new Professor();
+		professor.setCpf("123.345.456-45");
 		//TODO
 		return professor;
 	}
