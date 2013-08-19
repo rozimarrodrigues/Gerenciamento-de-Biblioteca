@@ -271,6 +271,13 @@ public class BibliotecaFacadeTest {
 		Professor aux = biblioteca.getProfessor(1);
 		assertEquals(professor, aux);
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarProfessorSemNome(){
+		Professor professor = criarProfessorPadrao();
+		professor.setNome(null);
+		biblioteca.adicionaProfessor(professor);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
@@ -313,16 +320,16 @@ public class BibliotecaFacadeTest {
 	private Professor criarProfessorPadrao(){
 		Professor professor;
 		professor = new Professor();
+		professor.setNome("Leopoldo");
 		professor.setCpf(CPF);
-		//TODO
 		return professor;
 	}
 	
 	private Professor criarProfessorAuxiliar(){
 		Professor professor;
 		professor = new Professor();
+		professor.setNome("Luiz");
 		professor.setCpf("123.345.456-45");
-		//TODO
 		return professor;
 	}
 }

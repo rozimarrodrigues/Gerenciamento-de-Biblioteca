@@ -11,6 +11,9 @@ public class GerenteProfessor {
 		if(professorJaCadastrado(professor)){
 			throw new ProfessorJaCadastradoException("Professor ja cadastrado!!!");
 		}
+		if(professor.getNome() == null){
+			throw new CampoInvalidoException("Professor sem nome!!!");
+		}
 		professores.add(professor);
 	}
 
