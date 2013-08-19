@@ -247,7 +247,7 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionarProfessor(){
-		Professor professor = new Professor();
+		Professor professor = criarProfessorPadrao();
 		biblioteca.adicionaProfessor(professor);
 		
 		Professor aux = biblioteca.getProfessor(0);  
@@ -256,7 +256,7 @@ public class BibliotecaFacadeTest {
 	
 	@Test(expected = ProfessorJaCadastradoException.class)
 	public void adicionarProfessorNovamente(){
-		Professor professor = new Professor();
+		Professor professor = criarProfessorPadrao();
 		biblioteca.adicionaProfessor(professor);
 		biblioteca.adicionaProfessor(professor);
 	}
