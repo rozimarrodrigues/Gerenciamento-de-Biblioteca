@@ -12,6 +12,10 @@ public class Professor extends Pessoa {
 		this.matricula = matricula;
 	}
 
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+
 	
 
 }
