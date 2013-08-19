@@ -298,4 +298,11 @@ public class BibliotecaFacadeTest {
 		funcionario.setCpf("015.657.367-00");
 		return funcionario;
 	}
+	
+	private Professor criarProfessorPadrao(){
+		Professor professor;
+		professor = new Professor();
+		//TODO
+		return professor;
+	}
 }
