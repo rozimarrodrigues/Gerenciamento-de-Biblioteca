@@ -20,6 +20,9 @@ public class GerenteProfessor {
 		if(professor.getDepartamento() == null){
 			throw new CampoInvalidoException("Professor sem departamento!!!");
 		}
+		if(professor.cpf().getCpf() == null){
+			throw new CampoInvalidoException("Professor sem CPF!!!");
+		}
 		professores.add(professor);
 	}
 
@@ -35,6 +38,10 @@ public class GerenteProfessor {
 			}
 		}
 		return existe;
+	}
+	
+	public boolean validarCpfDeProfessor(int pos) {
+		return getProfessor(pos).cpf().validarCpf();
 	}
 
 }

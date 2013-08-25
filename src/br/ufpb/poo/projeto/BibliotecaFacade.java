@@ -54,4 +54,8 @@ public class BibliotecaFacade {
 	public Professor getProfessor(int pos) {
 		return gerenteProfessor.getProfessor(pos);
 	}
+
+	public boolean validarCpfDeProfessor(int pos) {
+		return gerenteProfessor.validarCpfDeProfessor(pos);
+	}
 }

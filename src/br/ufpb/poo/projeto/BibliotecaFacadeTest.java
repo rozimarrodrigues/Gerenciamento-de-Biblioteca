@@ -292,6 +292,13 @@ public class BibliotecaFacadeTest {
 		professor.setDepartamento(null);
 		biblioteca.adicionaProfessor(professor);
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarProfessorSemCpf(){
+		Professor professor = criarProfessorPadrao();
+		professor.setCpf(null);
+		biblioteca.adicionaProfessor(professor);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
