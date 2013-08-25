@@ -20,7 +20,7 @@ public class BibliotecaFacadeTest {
 	public void adicionarAluno() {
 		Aluno aluno = criarAlunoPadrao();
 		biblioteca.adicionarAluno(aluno);
-		
+
 		Aluno aux = biblioteca.getAluno(0);
 		assertEquals(aluno, aux);
 	}
@@ -38,7 +38,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionarAluno(aluno);
 		aluno = criarAlunoAuxiliar();
 		biblioteca.adicionarAluno(aluno);
-		
+
 		Aluno aux = biblioteca.getAluno(1);
 		assertEquals("Espera-se que o segundo aluno seja o alunoAuxiliar",
 				aluno, aux);
@@ -86,14 +86,14 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionarAluno(aluno);
 		assertTrue(biblioteca.validarCpfDeAluno());
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoComCpfInvalido(){
 		Aluno aluno = criarAlunoPadrao();
 		aluno.setCpf("12345");
 		biblioteca.adicionarAluno(aluno);
 	}
-	
+
 	@Test
 	public void removerAluno(){
 		Aluno aluno = criarAlunoPadrao();
@@ -110,7 +110,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno);
 		biblioteca.removeAluno(aluno);
 	}
-	
+
 	@Test
 	public void removerAlunoDiferente(){
 		Aluno aluno1 = criarAlunoPadrao();
@@ -121,7 +121,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeAluno(aluno2);
 		assertEquals(0, biblioteca.quantidadeAlunos());
 	}
-	
+
 	@Test(expected = AlunoInexistenteException.class)
 	public void removerAlunoInexstente(){
 		Aluno aluno = criarAlunoPadrao();
@@ -129,77 +129,77 @@ public class BibliotecaFacadeTest {
 		aluno = criarAlunoAuxiliar();
 		biblioteca.removeAluno(aluno);
 	}
-	
+
 	@Test 
 	public void adicionarFuncionario(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
-		
+
 		Funcionario aux = biblioteca.getFuncionario(0);
 		assertEquals(funcionario, aux);
 	}
-	
+
 	@Test(expected = FuncionarioJaCadastradoException.class)
 	public void adicionarFuncionarioNovamente(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test
 	public void adicionarFuncionarioDiferente(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
 		funcionario = criarFuncionarioAuxiliar();
 		biblioteca.adicionaFuncionario(funcionario);
-		
+
 		Funcionario aux = biblioteca.getFuncionario(1);
 		assertEquals("Espera-se que o segundo funcionario seja o funcionarioAuxiliar",
 				funcionario, aux);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarFuncionarioSemNome(){
 		Funcionario funcionario = criarFuncionarioAuxiliar();
 		funcionario.setNome(null);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarFuncionarioSemMatricula(){
 		Funcionario funcionario = criarFuncionarioAuxiliar();
 		funcionario.setMatricula(0);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarFuncionarioSemFuncao(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		funcionario.setFuncao(null);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarFuncionarioSemCpf(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		funcionario.setCpf(null);
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test // Validar CPF do tipo "000.000.000-00"
 	public void adicionarFuncionarioComCpfValido(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		biblioteca.adicionaFuncionario(funcionario);
 		assertTrue(biblioteca.validarCpfDeFuncionario(0));
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarFuncionarioComCpfInvalido(){
 		Funcionario funcionario = criarFuncionarioPadrao();
 		funcionario.setCpf("12345");
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class) 
 	public void adicionarFuncionarioComCpfJaCadastrado(){
 		Funcionario funcionario = criarFuncionarioPadrao();
@@ -208,7 +208,7 @@ public class BibliotecaFacadeTest {
 		funcionario.setCpf(CPF);//Mesmo CPF do funcionarioPadrao
 		biblioteca.adicionaFuncionario(funcionario);
 	}
-	
+
 	@Test
 	public void removerFuncionario(){
 		Funcionario funcionario = criarFuncionarioPadrao();
@@ -217,7 +217,7 @@ public class BibliotecaFacadeTest {
 		assertEquals("Esperasse que não tenha funcionario",
 				0,biblioteca.quantidadeFuncionarios());
 	}
-	
+
 	@Test(expected = FuncionarioInexistenteException.class)
 	public void removerFuncionarioNovamente(){
 		Funcionario funcionario = criarFuncionarioPadrao();
@@ -225,7 +225,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeFuncionario(funcionario);
 		biblioteca.removeFuncionario(funcionario);
 	}
-	
+
 	@Test 
 	public void removerFucionarioDiferente(){
 		Funcionario funcionario1 = criarFuncionarioPadrao();
@@ -236,7 +236,7 @@ public class BibliotecaFacadeTest {
 		biblioteca.removeFuncionario(funcionario2);
 		assertEquals(0, biblioteca.quantidadeFuncionarios());
 	}
-	
+
 	@Test(expected = FuncionarioInexistenteException.class)
 	public void removerFuncionarioInexistente(){
 		Funcionario funcionario = criarFuncionarioPadrao();
@@ -244,60 +244,67 @@ public class BibliotecaFacadeTest {
 		funcionario = criarFuncionarioAuxiliar();
 		biblioteca.removeFuncionario(funcionario);
 	}
-	
+
 	@Test
 	public void adicionarProfessor(){
 		Professor professor = criarProfessorPadrao();
 		biblioteca.adicionaProfessor(professor);
-		
+
 		Professor aux = biblioteca.getProfessor(0);  
 		assertEquals(professor, aux);
 	}
-	
+
 	@Test(expected = ProfessorJaCadastradoException.class)
 	public void adicionarProfessorNovamente(){
 		Professor professor = criarProfessorPadrao();
 		biblioteca.adicionaProfessor(professor);
 		biblioteca.adicionaProfessor(professor);
 	}
-	
+
 	@Test
 	public void adicionarProfessorDiferente(){
 		Professor professor = criarProfessorPadrao();
 		biblioteca.adicionaProfessor(professor);
 		professor = criarProfessorAuxiliar();
 		biblioteca.adicionaProfessor(professor);
-		
+
 		Professor aux = biblioteca.getProfessor(1);
 		assertEquals(professor, aux);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarProfessorSemNome(){
 		Professor professor = criarProfessorPadrao();
 		professor.setNome(null);
 		biblioteca.adicionaProfessor(professor);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarProfessorSemMatricula(){
 		Professor professor = criarProfessorPadrao();
 		professor.setMatricula(0);
 		biblioteca.adicionaProfessor(professor);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarProfessorSemDepartamento(){
 		Professor professor = criarProfessorPadrao();
 		professor.setDepartamento(null);
 		biblioteca.adicionaProfessor(professor);
 	}
-	
+
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarProfessorSemCpf(){
 		Professor professor = criarProfessorPadrao();
 		professor.setCpf(null);
 		biblioteca.adicionaProfessor(professor);
+	}
+
+	@Test // Validar CPF do tipo "000.000.000-00"
+	public void adicionarProfessorComCpfValido(){
+		Professor professor = criarProfessorPadrao();
+		biblioteca.adicionaProfessor(professor);
+		assertTrue(biblioteca.validarCpfDeProfessor(0));
 	}
 
 	private Aluno criarAlunoPadrao() {
@@ -308,7 +315,7 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf(CPF);
 		return aluno;
 	}
-	
+
 	private Aluno criarAlunoAuxiliar() {
 		Aluno aluno;
 		aluno = new Aluno();
@@ -318,7 +325,7 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf("057.398.874-79");
 		return aluno;
 	}
-	
+
 	private Funcionario criarFuncionarioPadrao() {
 		Funcionario funcionario = new Funcionario();
 		funcionario.setNome("Dayane");
@@ -327,7 +334,7 @@ public class BibliotecaFacadeTest {
 		funcionario.setCpf(CPF);
 		return funcionario;
 	}
-	
+
 	private Funcionario criarFuncionarioAuxiliar() {
 		Funcionario funcionario;
 		funcionario = new Funcionario();
@@ -337,7 +344,7 @@ public class BibliotecaFacadeTest {
 		funcionario.setCpf("015.657.367-00");
 		return funcionario;
 	}
-	
+
 	private Professor criarProfessorPadrao(){
 		Professor professor;
 		professor = new Professor();
@@ -347,7 +354,7 @@ public class BibliotecaFacadeTest {
 		professor.setDepartamento("DCE");
 		return professor;
 	}
-	
+
 	private Professor criarProfessorAuxiliar(){
 		Professor professor;
 		professor = new Professor();
