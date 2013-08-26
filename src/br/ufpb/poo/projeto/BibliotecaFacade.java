@@ -58,4 +58,8 @@ public class BibliotecaFacade {
 	public boolean validarCpfDeProfessor(int pos) {
 		return gerenteProfessor.validarCpfDeProfessor(pos);
 	}
+
+	public void removerProfessor(Professor professor) {
+		gerenteProfessor.removeProfessor(professor);
+	}
 }
