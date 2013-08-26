@@ -61,6 +61,9 @@ public class GerenteProfessor {
 	}
 
 	public void removeProfessor(Professor professor) {
+		if(quantidadeDeProfessores() == 0){
+			throw new ProfessorInexistenteException("Não existe professor para remover");
+		}
 		professores.remove(professor);		
 	}
 
