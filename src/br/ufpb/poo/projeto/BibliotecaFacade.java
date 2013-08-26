@@ -1,5 +1,10 @@
 package br.ufpb.poo.projeto;
 
+/**
+ * 
+ * @author Mailton
+ *Teste commit
+ */
 public class BibliotecaFacade {
 
 	private GerenteAluno gerenteAluno = new GerenteAluno();
