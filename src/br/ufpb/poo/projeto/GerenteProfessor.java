@@ -23,6 +23,9 @@ public class GerenteProfessor {
 		if(professor.cpf().getCpf() == null){
 			throw new CampoInvalidoException("Professor sem CPF!!!");
 		}
+		if(!professor.cpf().validarCpf()){
+			throw new CampoInvalidoException("CPF invalido!!!");
+		}
 		professores.add(professor);
 	}
 

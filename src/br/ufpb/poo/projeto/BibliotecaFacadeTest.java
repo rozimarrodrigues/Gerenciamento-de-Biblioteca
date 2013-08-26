@@ -306,6 +306,13 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionaProfessor(professor);
 		assertTrue(biblioteca.validarCpfDeProfessor(0));
 	}
+	
+	@Test(expected = CampoInvalidoException.class)
+	public void adicionarProfessorComCpfInvalido(){
+		Professor professor = criarProfessorPadrao();
+		professor.setCpf("12345");
+		biblioteca.adicionaProfessor(professor);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
