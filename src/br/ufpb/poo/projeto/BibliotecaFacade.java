@@ -62,4 +62,8 @@ public class BibliotecaFacade {
 	public void removerProfessor(Professor professor) {
 		gerenteProfessor.removeProfessor(professor);
 	}
+
+	public int quantidadeProfessores() {
+		return gerenteProfessor.quantidadeDeProfessores();
+	}
 }

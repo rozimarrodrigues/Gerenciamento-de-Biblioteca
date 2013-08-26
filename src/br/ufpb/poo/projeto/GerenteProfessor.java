@@ -63,4 +63,8 @@ public class GerenteProfessor {
 	public void removeProfessor(Professor professor) {
 		professores.remove(professor);		
 	}
+
+	public int quantidadeDeProfessores() {
+		return professores.size();
+	}
 }
