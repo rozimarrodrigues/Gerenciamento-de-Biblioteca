@@ -26,6 +26,9 @@ public class GerenteProfessor {
 		if(!professor.cpf().validarCpf()){
 			throw new CampoInvalidoException("CPF invalido!!!");
 		}
+		if(cpfJaCadastrado(professor)){
+			throw new CampoInvalidoException("CPF ja cadastrado!!!");
+		}
 		professores.add(professor);
 	}
 
@@ -46,5 +49,14 @@ public class GerenteProfessor {
 	public boolean validarCpfDeProfessor(int pos) {
 		return getProfessor(pos).cpf().validarCpf();
 	}
-
+	
+	private boolean cpfJaCadastrado(Professor professor) {
+		boolean cadastrado = false;
+		for(Pessoa a: professores){
+			if(a.cpf().getCpf().equals(professor.cpf().getCpf())){
+				cadastrado = true;
+			}
+		}
+		return cadastrado;
+	}
 }

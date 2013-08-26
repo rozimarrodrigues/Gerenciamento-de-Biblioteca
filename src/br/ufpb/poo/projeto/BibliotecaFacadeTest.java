@@ -313,6 +313,15 @@ public class BibliotecaFacadeTest {
 		professor.setCpf("12345");
 		biblioteca.adicionaProfessor(professor);
 	}
+	
+	@Test(expected = CampoInvalidoException.class) 
+	public void adicionarProfessorComCpfJaCadastrado(){
+		Professor professor = criarProfessorPadrao();
+		biblioteca.adicionaProfessor(professor);
+		professor = criarProfessorAuxiliar();
+		professor.setCpf(CPF);//Mesmo CPF do ProfessorPadrao
+		biblioteca.adicionaProfessor(professor);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
