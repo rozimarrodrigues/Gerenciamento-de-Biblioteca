@@ -322,6 +322,15 @@ public class BibliotecaFacadeTest {
 		professor.setCpf(CPF);//Mesmo CPF do ProfessorPadrao
 		biblioteca.adicionaProfessor(professor);
 	}
+	
+	@Test
+	public void removerProfessor(){
+		Professor professor = criarProfessorPadrao();
+		biblioteca.adicionaProfessor(professor);
+		biblioteca.removerProfessor(professor);
+		assertEquals("Esperasse que não tenha professor",
+				0,biblioteca.quantidadeProfessores());
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
