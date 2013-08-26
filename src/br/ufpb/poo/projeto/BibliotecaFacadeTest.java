@@ -331,6 +331,14 @@ public class BibliotecaFacadeTest {
 		assertEquals("Esperasse que não tenha professor",
 				0,biblioteca.quantidadeProfessores());
 	}
+	
+	@Test(expected = ProfessorInexistenteException.class)
+	public void removerProfessorNovamente(){
+		Professor professor = criarProfessorPadrao();
+		biblioteca.adicionaProfessor(professor);
+		biblioteca.removerProfessor(professor);
+		biblioteca.removerProfessor(professor);
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
