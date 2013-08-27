@@ -1,8 +1,8 @@
-package br.ufpb.poo.projeto;
+package Exception;
 
 @SuppressWarnings("serial")
 public class CampoInvalidoException extends RuntimeException {
-	CampoInvalidoException(String msg){
+	public CampoInvalidoException(String msg){
 		super(msg);
 	}
 }

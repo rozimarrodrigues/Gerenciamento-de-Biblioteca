@@ -1,7 +1,14 @@
-package br.ufpb.poo.projeto;
+package Gerenciamento;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.ufpb.poo.projeto.Funcionario;
+import br.ufpb.poo.projeto.Pessoa;
+
+import Exception.CampoInvalidoException;
+import Exception.FuncionarioInexistenteException;
+import Exception.FuncionarioJaCadastradoException;
 
 public class GerenteFuncionario {
 

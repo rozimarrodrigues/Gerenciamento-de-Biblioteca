@@ -1,5 +1,9 @@
 package br.ufpb.poo.projeto;
 
+import Gerenciamento.GerenteAluno;
+import Gerenciamento.GerenteFuncionario;
+import Gerenciamento.GerenteProfessor;
+
 /**
  * 
  * @author Mailton

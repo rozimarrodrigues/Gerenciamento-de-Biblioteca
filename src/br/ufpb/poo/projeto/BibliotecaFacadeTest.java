@@ -6,6 +6,14 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import Exception.AlunoInexistenteException;
+import Exception.AlunoJaCadastradoException;
+import Exception.CampoInvalidoException;
+import Exception.FuncionarioInexistenteException;
+import Exception.FuncionarioJaCadastradoException;
+import Exception.ProfessorInexistenteException;
+import Exception.ProfessorJaCadastradoException;
+
 public class BibliotecaFacadeTest {
 
 	private BibliotecaFacade biblioteca;

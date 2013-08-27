@@ -1,7 +1,14 @@
-package br.ufpb.poo.projeto;
+package Gerenciamento;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.ufpb.poo.projeto.Pessoa;
+import br.ufpb.poo.projeto.Professor;
+
+import Exception.CampoInvalidoException;
+import Exception.ProfessorInexistenteException;
+import Exception.ProfessorJaCadastradoException;
 
 public class GerenteProfessor {
 	

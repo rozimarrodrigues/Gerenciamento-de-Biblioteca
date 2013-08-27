@@ -1,7 +1,14 @@
-package br.ufpb.poo.projeto;
+package Gerenciamento;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.ufpb.poo.projeto.Aluno;
+import br.ufpb.poo.projeto.Pessoa;
+
+import Exception.AlunoInexistenteException;
+import Exception.AlunoJaCadastradoException;
+import Exception.CampoInvalidoException;
 
 public class GerenteAluno {
 	
