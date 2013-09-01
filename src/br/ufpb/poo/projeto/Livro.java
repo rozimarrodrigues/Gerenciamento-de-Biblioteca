@@ -2,33 +2,33 @@ package br.ufpb.poo.projeto;
 
 public class Livro {
 	
-	private String nome;
-	private String autor;
-	private String curso;
+	private String nomeLivro;
+	private int codigoLivro;
 	
+	public Livro(String nomeLivro, int codigoLivro) {
+		this.nomeLivro = nomeLivro;
+		this.codigoLivro = codigoLivro;
+	}
 	
+	public int getCodigoLivro() {
+		return codigoLivro;
+	}
+	public void setCodigo(int codigoLivro) {
+		this.codigoLivro = codigoLivro;
+	}
 	public String getNome() {
-		return nome;
+		return nomeLivro;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String nomeLivro) {
+		this.nomeLivro = nomeLivro;
 	}
-	public String getAutor() {
-		return autor;
-	}
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-	public String getCurso() {
-		return curso;
-	}
-	public void setCurso(String curso) {
-		this.curso = curso;
-	}
-	
+
 	@Override
 	public String toString() {
-		return "Livro [nome=" + nome + ", autor=" + autor + ", curso=" + curso
+		return "Livro [nomeLivro =" + nomeLivro + ", codigoLivro =" + codigoLivro
 				+ "]";
 	}
+	
+	
+	
 }
