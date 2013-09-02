@@ -10,32 +10,45 @@ public class GerenteLivro {
 	
 	List<Livro> livros = new ArrayList<>();
 		
-	public void addLivro(String nomeLivro, int codigoLivro) throws LivroJaExisteException{
-		if(this.existeLivro(codigoLivro)){
-			throw new LivroJaExisteException("Livro ja cadastrado!");
+		public void inserirLivro(Livro p) throws LivroJaExisteException{
+			for( Livro liv:this.livros){
+				if(this.existeLivro(p)){
+					throw new LivroJaExisteException("Livro ja cadastrado");
+				}
 			}
-			else{
-				this.livros.add(new Livro(nomeLivro, codigoLivro));
-			}
+			this.livros.add((Livro)p);
 		}
-		
-		private boolean existeLivro(int codigoLivro) {
+	
+		private boolean existeLivro(Livro aux) {
 			for (Livro liv: this.livros){
-				if (liv.getCodigoLivro() == codigoLivro){
+				if (liv.getCodigoLivro() == aux.getCodigoLivro()){
 					return true;
 				}
 			}
 			return false;
 		}
 		public Livro pesquisaLivro(int codigoLivro) throws LivroInexistenteException{
-			for (Livro li: this.livros){
-				if (li.getCodigoLivro() == codigoLivro){
-					return li;
+			for (int i = 0; i < this.livros.size(); i++){
+				if (this.livros.get(i).getNomeLivro().equals(codigoLivro)) {
+					return (Livro)this.livros.get(i);
 				}
 			}
 			throw new LivroInexistenteException("Nao existe livro com o codigo: "+codigoLivro);
 		}
 		
+		
+		public void atualizarLivro(Livro liv1, Livro liv2) {
+			for (int i = 0; i < this.livros.size(); i++) {
+				if (this.livros.get(i).equals(liv1)) {
+					this.livros.set(i, (Livro)liv2);
+				}
+			}
+
+		}
+		
+		public void removeLivro(Livro liv) {
+			this.livros.remove((Livro)liv);
+		}
 		
 		public List<Livro> getLivrosCadastrados() {
 			return this.livros;

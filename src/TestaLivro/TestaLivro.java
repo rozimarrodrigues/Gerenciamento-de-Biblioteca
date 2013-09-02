@@ -24,20 +24,18 @@ public class TestaLivro {
 	public void testaCadastroLivro() {
 		
 		GerenteLivro livraria = new GerenteLivro();
+		Livro liv1 = new Livro("Java7", 10);
 		
 			try {
-				livraria.addLivro("Java7", 10);
+				livraria.inserirLivro(liv1);
 				Livro liv = livraria.pesquisaLivro(10);
-				assertEquals("Java7", liv.getNome());
+				assertEquals("Java7", liv.getNomeLivro());
 				
 			} catch (LivroJaExisteException e) {
 				fail("nao deve lanca esta excecao");
 			}catch (LivroInexistenteException e){
 				fail("nao deve lancar essa excecao!");
 			}
-			
-			
-		
-		
+				
 	}
 }
