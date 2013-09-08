@@ -2,10 +2,10 @@ package TestaLivro;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import Exception.LivroInexistenteException;
-import Exception.LivroJaExisteException;
-import Gerenciamento.GerenteLivro;
-import br.ufpb.poo.projeto.Livro;
+import br.ufpb.poo.biblioteca.controle.GerenteLivro;
+import br.ufpb.poo.biblioteca.entidade.Livro;
+import br.ufpb.poo.biblioteca.excecao.LivroInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.LivroJaExisteException;
 
 public class TestaMain {
 

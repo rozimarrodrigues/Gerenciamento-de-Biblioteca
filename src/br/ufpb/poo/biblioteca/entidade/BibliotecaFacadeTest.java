@@ -1,4 +1,4 @@
-package br.ufpb.poo.projeto;
+package br.ufpb.poo.biblioteca.entidade;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -6,13 +6,14 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import Exception.AlunoInexistenteException;
-import Exception.AlunoJaCadastradoException;
-import Exception.CampoInvalidoException;
-import Exception.FuncionarioInexistenteException;
-import Exception.FuncionarioJaCadastradoException;
-import Exception.ProfessorInexistenteException;
-import Exception.ProfessorJaCadastradoException;
+import br.ufpb.poo.biblioteca.excecao.AlunoInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.AlunoJaCadastradoException;
+import br.ufpb.poo.biblioteca.excecao.CampoInvalidoException;
+import br.ufpb.poo.biblioteca.excecao.FuncionarioInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.FuncionarioJaCadastradoException;
+import br.ufpb.poo.biblioteca.excecao.ProfessorInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.ProfessorJaCadastradoException;
+
 
 public class BibliotecaFacadeTest {
 

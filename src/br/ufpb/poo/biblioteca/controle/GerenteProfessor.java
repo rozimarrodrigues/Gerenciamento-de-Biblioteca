@@ -1,14 +1,14 @@
-package Gerenciamento;
+package br.ufpb.poo.biblioteca.controle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.ufpb.poo.projeto.Pessoa;
-import br.ufpb.poo.projeto.Professor;
+import br.ufpb.poo.biblioteca.entidade.Pessoa;
+import br.ufpb.poo.biblioteca.entidade.Professor;
+import br.ufpb.poo.biblioteca.excecao.CampoInvalidoException;
+import br.ufpb.poo.biblioteca.excecao.ProfessorInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.ProfessorJaCadastradoException;
 
-import Exception.CampoInvalidoException;
-import Exception.ProfessorInexistenteException;
-import Exception.ProfessorJaCadastradoException;
 
 public class GerenteProfessor {
 	

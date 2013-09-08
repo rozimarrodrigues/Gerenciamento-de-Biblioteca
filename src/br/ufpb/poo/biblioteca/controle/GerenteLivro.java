@@ -1,10 +1,10 @@
-package Gerenciamento;
+package br.ufpb.poo.biblioteca.controle;
 
 import java.util.ArrayList;
 import java.util.List;
-import Exception.LivroInexistenteException;
-import Exception.LivroJaExisteException;
-import br.ufpb.poo.projeto.Livro;
+import br.ufpb.poo.biblioteca.entidade.Livro;
+import br.ufpb.poo.biblioteca.excecao.LivroInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.LivroJaExisteException;
 
 public class GerenteLivro {
 	

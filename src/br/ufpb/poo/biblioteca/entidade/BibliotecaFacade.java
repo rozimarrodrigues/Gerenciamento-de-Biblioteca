@@ -1,8 +1,8 @@
-package br.ufpb.poo.projeto;
+package br.ufpb.poo.biblioteca.entidade;
 
-import Gerenciamento.GerenteAluno;
-import Gerenciamento.GerenteFuncionario;
-import Gerenciamento.GerenteProfessor;
+import br.ufpb.poo.biblioteca.controle.GerenteAluno;
+import br.ufpb.poo.biblioteca.controle.GerenteFuncionario;
+import br.ufpb.poo.biblioteca.controle.GerenteProfessor;
 
 /**
  * 

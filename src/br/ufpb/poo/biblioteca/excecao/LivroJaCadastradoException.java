@@ -1,4 +1,4 @@
-package Exception;
+package br.ufpb.poo.biblioteca.excecao;
 
 public class LivroJaCadastradoException extends Exception {
 

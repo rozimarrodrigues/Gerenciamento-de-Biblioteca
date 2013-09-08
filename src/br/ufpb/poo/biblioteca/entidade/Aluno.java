@@ -1,4 +1,4 @@
-package br.ufpb.poo.projeto;
+package br.ufpb.poo.biblioteca.entidade;
 
 public class Aluno extends Pessoa {
 	private int matricula;
