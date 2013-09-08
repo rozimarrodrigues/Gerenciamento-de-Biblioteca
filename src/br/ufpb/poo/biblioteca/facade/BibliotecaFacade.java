@@ -1,8 +1,11 @@
-package br.ufpb.poo.biblioteca.entidade;
+package br.ufpb.poo.biblioteca.facade;
 
 import br.ufpb.poo.biblioteca.controle.GerenteAluno;
 import br.ufpb.poo.biblioteca.controle.GerenteFuncionario;
 import br.ufpb.poo.biblioteca.controle.GerenteProfessor;
+import br.ufpb.poo.biblioteca.entidade.Aluno;
+import br.ufpb.poo.biblioteca.entidade.Funcionario;
+import br.ufpb.poo.biblioteca.entidade.Professor;
 
 /**
  * 

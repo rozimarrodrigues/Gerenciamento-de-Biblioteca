@@ -12,10 +12,10 @@ import org.junit.Test;
 
 import br.ufpb.poo.biblioteca.controle.GerenteLivro;
 import br.ufpb.poo.biblioteca.entidade.Aluno;
-import br.ufpb.poo.biblioteca.entidade.BibliotecaFacade;
 import br.ufpb.poo.biblioteca.entidade.Livro;
 import br.ufpb.poo.biblioteca.excecao.LivroInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.LivroJaExisteException;
+import br.ufpb.poo.biblioteca.facade.BibliotecaFacade;
 
 
 public class TestaLivro {
