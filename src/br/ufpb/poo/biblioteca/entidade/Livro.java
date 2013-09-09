@@ -27,8 +27,5 @@ public class Livro {
 	public String toString() {
 		return "Livro [nomeLivro =" + nomeLivro + ", codigoLivro =" + codigoLivro
 				+ "]";
-	}
-	
-	
-	
+	}	
 }
