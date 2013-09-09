@@ -9,17 +9,17 @@ public class Livro {
 		this.nomeLivro = nomeLivro;
 		this.codigoLivro = codigoLivro;
 	}
-	
+		
 	public int getCodigoLivro() {
 		return codigoLivro;
 	}
-	public void setCodigo(int codigoLivro) {
+	public void setCodigoLivro(int codigoLivro) {
 		this.codigoLivro = codigoLivro;
 	}
-	public String getNome() {
+	public String getNomeLivro() {
 		return nomeLivro;
 	}
-	public void setNome(String nomeLivro) {
+	public void setNomeLivro(String nomeLivro) {
 		this.nomeLivro = nomeLivro;
 	}
 
