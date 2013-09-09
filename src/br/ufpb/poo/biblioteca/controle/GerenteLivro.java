@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import br.ufpb.poo.biblioteca.entidade.Livro;
 import br.ufpb.poo.biblioteca.excecao.LivroInexistenteException;
-import br.ufpb.poo.biblioteca.excecao.LivroJaExisteException;
+import br.ufpb.poo.biblioteca.excecao.LivroJaCadastradoException;
 
 public class GerenteLivro {
 	
-	List<Livro> livros = new ArrayList<>();
+	List<Livro> livros = new ArrayList<Livro>();
 		
-		public void inserirLivro(Livro p) throws LivroJaExisteException{
+		public void inserirLivro(Livro p) throws LivroJaCadastradoException{
 			for( Livro liv:this.livros){
 				if(this.existeLivro(p)){
-					throw new LivroJaExisteException("Livro ja cadastrado");
+					throw new LivroJaCadastradoException("Livro ja cadastrado");
 				}
 			}
 			this.livros.add((Livro)p);
@@ -27,6 +27,7 @@ public class GerenteLivro {
 			}
 			return false;
 		}
+		
 		public Livro pesquisaLivro(int codigoLivro) throws LivroInexistenteException{
 			for (int i = 0; i < this.livros.size(); i++){
 				if (this.livros.get(i).getNomeLivro().equals(codigoLivro)) {
@@ -35,7 +36,6 @@ public class GerenteLivro {
 			}
 			throw new LivroInexistenteException("Nao existe livro com o codigo: "+codigoLivro);
 		}
-		
 		
 		public void atualizarLivro(Livro liv1, Livro liv2) {
 			for (int i = 0; i < this.livros.size(); i++) {
@@ -53,7 +53,4 @@ public class GerenteLivro {
 		public List<Livro> getLivrosCadastrados() {
 			return this.livros;
 		}
-
-	
-	
 }
