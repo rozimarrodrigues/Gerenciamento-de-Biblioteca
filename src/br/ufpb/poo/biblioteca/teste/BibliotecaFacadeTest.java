@@ -352,6 +352,11 @@ public class BibliotecaFacadeTest {
 		biblioteca.removerProfessor(professor);
 		biblioteca.removerProfessor(professor);
 	}
+	
+	@Test
+	public void adicionarLivro(){
+		//TODO Mailton é pra fazer aqui os teste de livro
+	}
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
