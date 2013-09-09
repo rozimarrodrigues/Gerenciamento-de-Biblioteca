@@ -1,8 +1,12 @@
-package br.ufpb.poo.projeto;
+package br.ufpb.poo.biblioteca.facade;
 
-import Gerenciamento.GerenteAluno;
-import Gerenciamento.GerenteFuncionario;
-import Gerenciamento.GerenteProfessor;
+import br.ufpb.poo.biblioteca.controle.GerenteAluno;
+import br.ufpb.poo.biblioteca.controle.GerenteFuncionario;
+import br.ufpb.poo.biblioteca.controle.GerenteLivro;
+import br.ufpb.poo.biblioteca.controle.GerenteProfessor;
+import br.ufpb.poo.biblioteca.entidade.Aluno;
+import br.ufpb.poo.biblioteca.entidade.Funcionario;
+import br.ufpb.poo.biblioteca.entidade.Professor;
 
 /**
  * 
@@ -14,6 +18,7 @@ public class BibliotecaFacade {
 	private GerenteAluno gerenteAluno = new GerenteAluno();
 	private GerenteFuncionario gerenteFuncionario = new GerenteFuncionario();
 	private GerenteProfessor gerenteProfessor = new GerenteProfessor();
+	private GerenteLivro gerenteLivro = new GerenteLivro(); // Mailton era pra ter feito aqui
 	
 	public void adicionarAluno(Aluno aluno) {
 		gerenteAluno.addAluno(aluno);
