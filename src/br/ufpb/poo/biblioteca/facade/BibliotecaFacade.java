@@ -6,19 +6,15 @@ import br.ufpb.poo.biblioteca.controle.GerenteLivro;
 import br.ufpb.poo.biblioteca.controle.GerenteProfessor;
 import br.ufpb.poo.biblioteca.entidade.Aluno;
 import br.ufpb.poo.biblioteca.entidade.Funcionario;
+import br.ufpb.poo.biblioteca.entidade.Livro;
 import br.ufpb.poo.biblioteca.entidade.Professor;
 
-/**
- * 
- * @author Mailton
- *Teste commit
- */
 public class BibliotecaFacade {
 
 	private GerenteAluno gerenteAluno = new GerenteAluno();
 	private GerenteFuncionario gerenteFuncionario = new GerenteFuncionario();
 	private GerenteProfessor gerenteProfessor = new GerenteProfessor();
-	private GerenteLivro gerenteLivro = new GerenteLivro(); // Mailton era pra ter feito aqui
+	private GerenteLivro gerenteLivro = new GerenteLivro(); 
 	
 	public void adicionarAluno(Aluno aluno) {
 		gerenteAluno.addAluno(aluno);
@@ -79,5 +75,21 @@ public class BibliotecaFacade {
 
 	public int quantidadeProfessores() {
 		return gerenteProfessor.quantidadeDeProfessores();
+	}
+	
+	public void adicionarLivro(Livro livro) {
+		gerenteLivro.addLivro(livro);
+	}
+	
+	public int quantidadeLivros() {
+		return gerenteLivro.quantidadeDeLivros();
+	}
+
+	public void removeLivro(Livro livro) {
+		gerenteLivro.removerLivro(livro);
+		
+	}
+	public Livro getLivro(int pos) {
+		return gerenteLivro.getLivro(pos);
 	}
 }
