@@ -15,6 +15,11 @@ public class GerenteAluno {
 	private List<Aluno> alunos = new ArrayList<Aluno>(); 
 
 	public void addAluno(Aluno aluno){
+		validarAluno(aluno);
+		alunos.add(aluno);
+	}
+
+	private void validarAluno(Aluno aluno) {
 		if(aluno.getMatricula() == 0){
 			throw new CampoInvalidoException("Aluno sem matricula!!!");
 		}
@@ -36,7 +41,6 @@ public class GerenteAluno {
 		if(!aluno.cpf().validarCpf()){
 			throw new CampoInvalidoException("CPF invalido!!!");
 		}
-		alunos.add(aluno);
 	}
 	
 	private boolean cpfJaCadastrado(Aluno aluno) {
