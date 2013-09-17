@@ -15,6 +15,11 @@ public class GerenteProfessor {
 	private List<Professor> professores = new ArrayList<Professor>(); 
 
 	public void addProfessor(Professor professor) {
+		validarProfessor(professor);
+		professores.add(professor);
+	}
+
+	private void validarProfessor(Professor professor) {
 		if(professor.getMatricula() == 0){
 			throw new CampoInvalidoException("Professor sem matricula!!!");
 		}
@@ -36,7 +41,6 @@ public class GerenteProfessor {
 		if(cpfJaCadastrado(professor)){
 			throw new CampoInvalidoException("CPF ja cadastrado!!!");
 		}
-		professores.add(professor);
 	}
 
 	public Professor getProfessor(int pos){
