@@ -5,11 +5,6 @@ public class Livro {
 	private String nomeLivro;
 	private int codigoLivro;
 	
-	public Livro(String nomeLivro, int codigoLivro) {
-		this.nomeLivro = nomeLivro;
-		this.codigoLivro = codigoLivro;
-	}
-	
 	public int getCodigoLivro() {
 		return codigoLivro;
 	}
