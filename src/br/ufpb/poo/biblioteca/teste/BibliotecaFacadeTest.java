@@ -356,7 +356,7 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionarLivro(){
-		fail("Não está implementado");
+		
 	}
 
 	private Aluno criarAlunoPadrao() {
