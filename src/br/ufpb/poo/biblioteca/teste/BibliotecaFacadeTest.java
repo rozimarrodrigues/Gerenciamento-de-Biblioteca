@@ -2,7 +2,6 @@ package br.ufpb.poo.biblioteca.teste;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +15,7 @@ import br.ufpb.poo.biblioteca.excecao.AlunoJaCadastradoException;
 import br.ufpb.poo.biblioteca.excecao.CampoInvalidoException;
 import br.ufpb.poo.biblioteca.excecao.FuncionarioInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.FuncionarioJaCadastradoException;
+import br.ufpb.poo.biblioteca.excecao.LivroJaCadastradoException;
 import br.ufpb.poo.biblioteca.excecao.ProfessorInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.ProfessorJaCadastradoException;
 import br.ufpb.poo.biblioteca.facade.BibliotecaFacade;
@@ -363,6 +363,22 @@ public class BibliotecaFacadeTest {
 		Livro aux = biblioteca.getLivro(0);
 		assertEquals(livro, aux);
 	}
+	
+	@Test(expected = LivroJaCadastradoException.class)
+	public void adicionarLIvroNovamente(){
+		Livro livro = criarLivroPadrao();
+		biblioteca.adicionarLivro(livro);
+		biblioteca.adicionarLivro(livro);
+	}
+
+
+	private Livro criarLivroPadrao() {
+		Livro livro = new Livro();
+		livro.setNome("Java 6");
+		livro.setCodigo(01);
+		return livro;
+	}
+
 
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();

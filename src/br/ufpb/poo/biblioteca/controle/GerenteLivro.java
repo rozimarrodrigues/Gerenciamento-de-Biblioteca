@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.ufpb.poo.biblioteca.entidade.Livro;
+import br.ufpb.poo.biblioteca.excecao.LivroInexistenteException;
+import br.ufpb.poo.biblioteca.excecao.LivroJaCadastradoException;
 
 public class GerenteLivro {
 	
@@ -13,6 +15,9 @@ public class GerenteLivro {
 	}
 	
 	public void addLivro(Livro livro){
+		if(livroJaCadastrado(livro)){
+			throw new LivroJaCadastradoException("Livro ja cadastrado!");
+		}
 		livros.add(livro);
 	}
 	
