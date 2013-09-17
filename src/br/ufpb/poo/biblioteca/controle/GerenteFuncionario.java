@@ -15,6 +15,11 @@ public class GerenteFuncionario {
 	private List<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
 	public void addFuncionario(Funcionario funcionario) {
+		validarFuncionario(funcionario);
+		funcionarios.add(funcionario);
+	}
+
+	private void validarFuncionario(Funcionario funcionario) {
 		if(funcionarioJaCadastrado(funcionario)){
 			throw new FuncionarioJaCadastradoException("Funcionario ja cadastrado!!!");
 		}
@@ -36,7 +41,6 @@ public class GerenteFuncionario {
 		if(cpfJaCadastrado(funcionario)){
 			throw new CampoInvalidoException("Funcionario com CPF ja cadastrado!!!");
 		}
-		funcionarios.add(funcionario);
 	}
 
 	private boolean funcionarioJaCadastrado(Funcionario funcionario) {
