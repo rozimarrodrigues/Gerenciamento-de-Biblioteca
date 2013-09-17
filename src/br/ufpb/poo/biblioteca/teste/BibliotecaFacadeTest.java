@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import br.ufpb.poo.biblioteca.entidade.Aluno;
 import br.ufpb.poo.biblioteca.entidade.Funcionario;
+import br.ufpb.poo.biblioteca.entidade.Livro;
 import br.ufpb.poo.biblioteca.entidade.Professor;
 import br.ufpb.poo.biblioteca.excecao.AlunoInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.AlunoJaCadastradoException;
@@ -356,7 +357,11 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionarLivro(){
+		Livro livro = new Livro();
+		biblioteca.adicionarLivro(livro);
 		
+		Livro aux = biblioteca.getLivro(0);
+		assertEquals(livro, aux);
 	}
 
 	private Aluno criarAlunoPadrao() {
