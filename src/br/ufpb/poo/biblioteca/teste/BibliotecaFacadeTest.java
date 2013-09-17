@@ -356,7 +356,6 @@ public class BibliotecaFacadeTest {
 	
 	@Test
 	public void adicionarLivro(){
-		//TODO Mailton é pra fazer aqui os teste de livro
 		fail("Não está implementado");
 	}
 
