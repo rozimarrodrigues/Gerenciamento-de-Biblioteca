@@ -15,9 +15,11 @@ public class GerenteLivro {
 	}
 	
 	public void addLivro(Livro livro){
+		
 		if(livroJaCadastrado(livro)){
 			throw new LivroJaCadastradoException("Livro ja cadastrado!");
 		}
+		
 		livros.add(livro);
 	}
 	
@@ -36,6 +38,13 @@ public class GerenteLivro {
 	}
 	
 	public void removerLivro(Livro livro) {
+		
+		if(quantidadeDeLivros() == 0){
+			throw new LivroInexistenteException("Não existe livro para remover!!!");
+		}
+		if(!exiteLivro(livro)){
+			throw new LivroInexistenteException("Livro inexistente!!!");
+		}
 		livros.remove(livro);
 	}
 	

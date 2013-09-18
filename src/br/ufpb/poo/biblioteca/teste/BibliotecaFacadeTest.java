@@ -15,6 +15,7 @@ import br.ufpb.poo.biblioteca.excecao.AlunoJaCadastradoException;
 import br.ufpb.poo.biblioteca.excecao.CampoInvalidoException;
 import br.ufpb.poo.biblioteca.excecao.FuncionarioInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.FuncionarioJaCadastradoException;
+import br.ufpb.poo.biblioteca.excecao.LivroInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.LivroJaCadastradoException;
 import br.ufpb.poo.biblioteca.excecao.ProfessorInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.ProfessorJaCadastradoException;
@@ -359,7 +360,6 @@ public class BibliotecaFacadeTest {
 	public void adicionarLivro(){
 		Livro livro = new Livro();
 		biblioteca.adicionarLivro(livro);
-		
 		Livro aux = biblioteca.getLivro(0);
 		assertEquals(livro, aux);
 	}
@@ -370,7 +370,31 @@ public class BibliotecaFacadeTest {
 		biblioteca.adicionarLivro(livro);
 		biblioteca.adicionarLivro(livro);
 	}
+	
+	@Test
+	public void removerLivro(){
+		Livro livro = criarLivroPadrao();
+		biblioteca.adicionarLivro(livro);
+		biblioteca.removeLivro(livro);
+		assertEquals("Esperasse que não tenha livro",
+				0,biblioteca.quantidadeAlunos());
+	}
+	
+	@Test(expected = LivroInexistenteException.class)
+	public void removerLivroInexstente(){
+		Livro livro = criarLivroPadrao();
+		biblioteca.adicionarLivro(livro);
+		livro = criarLivroAuxiliar();
+		biblioteca.removeLivro(livro);
+	}
 
+	private Livro criarLivroAuxiliar() {
+		Livro livro;
+		livro = new Livro();
+		livro.setNome("Sistemas Operacionais");
+		livro.setCodigo(5);
+		return livro;
+	}
 
 	private Livro criarLivroPadrao() {
 		Livro livro = new Livro();
@@ -378,8 +402,7 @@ public class BibliotecaFacadeTest {
 		livro.setCodigo(01);
 		return livro;
 	}
-
-
+	
 	private Aluno criarAlunoPadrao() {
 		Aluno aluno = new Aluno();
 		aluno.setNome("Rozimar");
@@ -388,7 +411,7 @@ public class BibliotecaFacadeTest {
 		aluno.setCpf(CPF);
 		return aluno;
 	}
-
+	
 	private Aluno criarAlunoAuxiliar() {
 		Aluno aluno;
 		aluno = new Aluno();
