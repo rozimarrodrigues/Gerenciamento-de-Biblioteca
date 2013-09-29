@@ -21,7 +21,6 @@ import br.ufpb.poo.biblioteca.excecao.ProfessorInexistenteException;
 import br.ufpb.poo.biblioteca.excecao.ProfessorJaCadastradoException;
 import br.ufpb.poo.biblioteca.facade.BibliotecaFacade;
 
-
 public class BibliotecaFacadeTest {
 
 	private BibliotecaFacade biblioteca;
@@ -95,14 +94,7 @@ public class BibliotecaFacadeTest {
 		aluno.setCurso(null);
 		biblioteca.adicionarAluno(aluno);
 	}
-
-	@Test // Validar CPF do tipo "000.000.000-00"
-	public void adicionarAlunoComCpfValido(){
-		Aluno aluno = criarAlunoPadrao();
-		biblioteca.adicionarAluno(aluno);
-		assertTrue(biblioteca.validarCpfDeAluno());
-	}
-
+	
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarAlunoComCpfInvalido(){
 		Aluno aluno = criarAlunoPadrao();
@@ -200,13 +192,6 @@ public class BibliotecaFacadeTest {
 		Funcionario funcionario = criarFuncionarioPadrao();
 		funcionario.setCpf(null);
 		biblioteca.adicionaFuncionario(funcionario);
-	}
-
-	@Test // Validar CPF do tipo "000.000.000-00"
-	public void adicionarFuncionarioComCpfValido(){
-		Funcionario funcionario = criarFuncionarioPadrao();
-		biblioteca.adicionaFuncionario(funcionario);
-		assertTrue(biblioteca.validarCpfDeFuncionario(0));
 	}
 
 	@Test(expected = CampoInvalidoException.class)
@@ -315,14 +300,7 @@ public class BibliotecaFacadeTest {
 		professor.setCpf(null);
 		biblioteca.adicionaProfessor(professor);
 	}
-
-	@Test // Validar CPF do tipo "000.000.000-00"
-	public void adicionarProfessorComCpfValido(){
-		Professor professor = criarProfessorPadrao();
-		biblioteca.adicionaProfessor(professor);
-		assertTrue(biblioteca.validarCpfDeProfessor(0));
-	}
-	
+		
 	@Test(expected = CampoInvalidoException.class)
 	public void adicionarProfessorComCpfInvalido(){
 		Professor professor = criarProfessorPadrao();
