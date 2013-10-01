@@ -57,10 +57,6 @@ public class GerenteProfessor {
 		return existe;
 	}
 	
-	public boolean validarCpfDeProfessor(int pos) {
-		return getProfessor(pos).cpf().validarCpf();
-	}
-	
 	private boolean cpfJaCadastrado(Professor professor) {
 		boolean cadastrado = false;
 		for(Pessoa a: professores){
