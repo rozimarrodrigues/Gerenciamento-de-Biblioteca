@@ -90,10 +90,4 @@ public class GerenteFuncionario {
 		}
 		return existe;
 	}
-
-	public boolean validarCpfDeFuncionario(int pos) {
-		boolean valido = false;
-		valido = getFuncionario(pos).cpf().validarCpf();
-		return valido;
-	}
 }
