@@ -41,10 +41,6 @@ public class BibliotecaFacade {
 		return gerenteFuncionario.quantidadeDefuncionarios();
 	}
 
-	public boolean validarCpfDeFuncionario(int pos) {
-		return gerenteFuncionario.validarCpfDeFuncionario(pos);
-	}
-
 	public void removeFuncionario(Funcionario funcionario) {
 		gerenteFuncionario.removeFuncionario(funcionario);
 	}
