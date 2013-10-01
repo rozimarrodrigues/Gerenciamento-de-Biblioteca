@@ -87,12 +87,4 @@ public class GerenteAluno {
 		}
 		return existe;
 	}
-
-	//TODO Só testa o primeiro aluno?
-	//Não deve ser público
-	//Remover esse método
-	public boolean validarCpfDeAluno() {
-		return getAluno(0).cpf().validarCpf();
-	}
-
 }
